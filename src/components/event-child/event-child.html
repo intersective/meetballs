@@ -1,0 +1,57 @@
+
+<ion-grid>
+    <ion-row (click)="onEventClick()">
+        <ion-col width-25>
+            <table>
+                <tr>
+                    <td rowspan="2" id="hour">
+                        {{entry['startHour']}}
+                    </td>
+                    <td id="minute" class="padding-right">
+                        {{entry['startMinute']}}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="ampm" class="padding-right">
+                        {{entry['ampm']}}
+                    </td>
+                </tr>
+            </table>
+        </ion-col>
+        <ion-col width-75>
+            <div id="title">{{entry['title']}}</div>
+
+            <br>
+            <div id="duration">{{entry['duration']}}</div>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col width-25 style="padding-bottom: 0px;">
+            <div id="rsvp">RSVP</div>
+        </ion-col>
+
+        <ion-col width-75 style="padding-bottom: 0px;">
+            <div id="attendants">Attendees</div>
+        </ion-col>
+    </ion-row>
+    <ion-row style="padding-top: 0px;">
+        <ion-col width-25 text-center>
+            <button ion-button clear icon-only [ngClass] = "{'red': entry['RSVP'] == -1, 'green': entry['RSVP'] == 1, 'grey': entry['RSVP'] == 0, 'rsvpButton': true}" (click) = "onRSVP()">
+                <custom-icon set="ci" name="{{rsvpIcon}}" #rsvpButton></custom-icon>
+            </button>
+        </ion-col>
+        <ion-col width-75>
+            <div id="wrapper" >
+                <div *ngFor="let attende of entry['attendees']; let i = index" style="display: inline-table;">
+                    <meetball-avatar #meetballAvatar *ngIf="i < 4 || avatarShow" [img]="'url(assets/img/' + attende.email + ')'" [response]="attende.response"></meetball-avatar>
+                </div>
+                <div class="div-button-more">
+                    <button class="moreButton" ion-button clear icon-only *ngIf="moreButtonShow" (click)="onMoreClick()">
+                        <custom-icon set="ci" name="{{iconName}}"></custom-icon>
+                    </button>
+                </div>
+                <div *ngIf="otherText" class="otherText">And {{noOfMorePeople}} others</div>
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>

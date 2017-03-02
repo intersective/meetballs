@@ -1,0 +1,138 @@
+event-child {
+  ion-col[width-25]{
+    margin-left: -10px;
+    padding-right: 0px;
+
+    button{
+      .button-inner{
+        width: 15vw;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  ion-col[width-75]{
+    border-left: 1px solid darkgrey;
+    margin-left: 1vw;
+  }
+
+  #hour{
+    font-size: 11.5vw;
+    color: #cf5857;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial;
+  }
+
+  #minute{
+    color: #cf5857;
+    text-align: center;
+    width: 100%;
+    font-size: 5.5vw;
+    font-family: Arial;
+  }
+
+  #ampm{
+    color: #cf5857;
+    text-align: center;
+    font-size: 4.5vw;
+    font-family: Arial;
+  }
+
+  #title{
+    color: #cf5857;
+    font-size: 6vw;
+    font-family: Myriad Pro;
+  }
+
+  #duration{
+    color: #714d4c;
+    font-size: 4.5vw;
+    margin-top: -12px;
+  }
+
+  #rsvp{
+    color: #714d4b;
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  ion-img{
+    width: 40px;
+    height: 40px;
+  }
+
+  #attendants{
+    color: #cd5756;
+    font-size: 5vw;
+  }
+
+  .moreButton{
+    width: 40px;
+    margin: 0px;
+    padding: 10px 0 0 0 !important;
+    display: inline-table;
+    vertical-align: middle;
+    font-size: 1rem;
+    color: #704d4c;
+  }
+
+  .otherText{
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 10px;
+    color: #704d4c;
+  }
+
+  .rsvpButton{
+    font-size: 7vw;
+    height: 16vw;
+  }
+
+  .grey{
+    color: grey;
+  }
+
+  .red{
+    color: red;
+  }
+
+  .green{
+    color: green;
+  }
+
+  spot-tall {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 50%;
+    padding-bottom: 70%
+  }
+
+  .spot-wide {
+    width: 100%;
+    padding-top: 12.5%;
+    padding-bottom: 14.6%
+  }
+
+  .no-padding {
+    padding: 0px !important;
+    border: 1px solid black;
+  }
+
+  .padding-right{
+    padding-right: 10px;
+  }
+  table {
+    border-collapse: collapse;
+  }
+
+  ion-grid{
+    padding: 0px;
+  }
+
+  .div-button-more{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

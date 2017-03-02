@@ -1,0 +1,14 @@
+<!--
+  Generated template for the EventDay component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<div>
+    <h1 style="margin: 0 0 0px 0">{{entries['events'][0]['monthTitle']}}</h1>
+    <h2 style="margin: 0 0 10px 0">{{entries['events'][0]['dayTitle']}}</h2>
+    <div *ngFor="let eventChild of entries['events']; let i = index">
+        <event-child [entry]="eventChild"></event-child>
+    </div>
+</div>

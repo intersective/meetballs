@@ -1,0 +1,116 @@
+page-leader-board {
+  .toolbar-background {
+    background-color: #f0d775;
+  }
+
+  .circle{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 1px groove #704d4c;
+  }
+
+  .box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .text-color{
+    color: #704d4c;
+  }
+
+  .point-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .point{
+    font-size: 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .point-number{
+    font-size: 24vw;
+    display: inline-block;
+    line-height: 14vw;
+    height: 16vw;
+    margin-bottom: 2vw;
+  }
+
+  .point-text{
+    font-size: 7vw;
+    display: inline-block;
+    line-height: 6vw;
+    height: 6vw;
+  }
+
+  .swiper-container {
+    height: 100px !important;
+  }
+
+  .swiper-slide{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .finished{
+    color: #cf5959;
+    text-shadow: 0 0 5px #ffa6a6;
+  }
+
+  .unfinished{
+    color: transparent;
+    text-shadow: 0 0 5px grey;
+  }
+
+  .achievement-icon{
+    font-size: 19vw;
+
+  }
+
+  .avatar {
+    /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+
+
+    /* make a square container */
+    width: 16vw;
+    height: 16vw;
+
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+
+    /* center the image vertically and horizontally */
+    //background-position: center;
+
+    /* round the edges to a circle with border radius 1/2 container size */
+    border-radius: 50%;
+    display:inline-block;
+    vertical-align: middle;
+  }
+
+  .ranking-container{
+    display: flex;
+  }
+
+  .ranking-name{
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .ranking-point{
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

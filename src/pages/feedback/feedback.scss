@@ -1,0 +1,26 @@
+page-feedback {
+  ion-col[width-80]{
+    display: flex;
+    align-items: center;
+  }
+
+  .toolbar-background {
+    background-color: #f0d775;
+  }
+
+  .no-padding{
+    padding: 0px;
+  }
+
+  ion-col{
+    font-size: 3.5vw;
+  }
+
+  .submit-button{
+    position: absolute;
+    top: 75vh;
+    left: 5vw;
+    right: 5vw;
+    width: 90vw;
+  }
+}

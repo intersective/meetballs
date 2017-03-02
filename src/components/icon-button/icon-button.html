@@ -1,0 +1,23 @@
+<!--
+  Generated template for the IconButton component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+<ion-grid style="padding: 0px; margin: 0px;">
+    <ion-row>
+        <ion-col width-50 text-center style="padding: 0 0 0px 0; margin: 0 5px 0 0;">
+            <button ion-button color="{{yesColor}}" clear icon-only (click)="onYes()" class="iconButton">
+                <custom-icon set="ci" name="icon_checked" is-active="false"></custom-icon>
+            </button>
+        </ion-col>
+        <ion-col width-50 text-center style="padding: 0 0 0px 0; margin: 0 0 0 5px;">
+            <button ion-button color="{{noColor}}" clear icon-only (click)="onNo()" class="iconButton">
+                <custom-icon set="ci" name="icon_unchecked" is-active="false">
+                </custom-icon>
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+
+

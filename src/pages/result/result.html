@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title><b  style="color: #704d4c;">Meetings</b></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div>Do you think that this meeting was useful?</div>
+    <div class="stacked-bar-graph">
+        <span *ngIf="results.p1 != 0" [ngStyle]="{'width': results.p1  + '%' }" [ngClass]="{barRed: results.p1 > 0, barOrange: results.p1 > 30, barGreen: results.p1 > 70}">Yes {{results.n1}}</span>
+        <span *ngIf="results.p1 != 100" [ngStyle]="{'width': (100 - results.p1) + '%' }" class="barGrey">No {{results.total - results.n1}}</span>
+    </div>
+
+    <div>Was the agenda for the meeting clear?</div>
+    <div class="stacked-bar-graph">
+        <span *ngIf="results.p2 != 0" [ngStyle]="{'width': results.p2  + '%' }" [ngClass]="{barRed: results.p2 > 0, barOrange: results.p2 > 30, barGreen: results.p2 > 70}">Yes {{results.n2}}</span>
+        <span *ngIf="results.p2 != 100" [ngStyle]="{'width': (100 - results.p2) + '%' }" class="barGrey">No {{results.total - results.n2}}</span>
+    </div>
+
+    <div>Did you achieved the desired outcome?</div>
+    <div class="stacked-bar-graph">
+        <span *ngIf="results.p3 != 0" [ngStyle]="{'width': results.p3  + '%' }" [ngClass]="{barRed: results.p3 > 0, barOrange: results.p3 > 30, barGreen: results.p3 > 70}">Yes {{results.n3}}</span>
+        <span *ngIf="results.p3 != 100" [ngStyle]="{'width': (100 - results.p3) + '%' }" class="barGrey">No {{results.total - results.n3}}</span>
+    </div>
+
+    <div>Did someone took notes?</div>
+    <div class="stacked-bar-graph">
+        <span *ngIf="results.p4 != 0" [ngStyle]="{'width': results.p4  + '%' }" [ngClass]="{barRed: results.p4 > 0, barOrange: results.p4 > 30, barGreen: results.p4 > 70}">Yes {{results.n4}}</span>
+        <span *ngIf="results.p4 != 100" [ngStyle]="{'width': (100 - results.p4) + '%' }" class="barGrey">No {{results.total - results.n4}}</span>
+    </div>
+
+    <div>Did every participant contributed values</div>
+    <div class="stacked-bar-graph">
+        <span *ngIf="results.p5 != 0" [ngStyle]="{'width': results.p5  + '%' }" [ngClass]="{barRed: results.p5 > 0, barOrange: results.p5 > 30, barGreen: results.p5 > 70}">Yes {{results.n5}}</span>
+        <span *ngIf="results.p5 != 100" [ngStyle]="{'width': (100 - results.p5) + '%' }" class="barGrey">No {{results.total - results.n5}}</span>
+    </div>
+
+    <div>How was the atmosphere in the room?</div>
+    <div style="display: block">
+        <canvas baseChart
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"
+                [options]="doughnutChartOptions"
+                [colors] = "doughnutColors"></canvas>
+    </div>
+</ion-content>

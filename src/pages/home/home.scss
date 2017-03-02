@@ -1,0 +1,46 @@
+page-home {
+  ion-content {
+    margin:0;
+    padding:0;
+    height: 100%;
+  }
+
+  .no-scroll .scroll-content{
+    overflow: hidden;
+  }
+
+  .background{
+    background-size: 100% 100% !important;
+    min-height:100% !important;
+  }
+
+  .loginButton{
+    margin: 75vh 5vw 0 5vw;
+    background-color: #cf5959;
+    width: 90vw;
+    text-align: center;
+    color: white;
+  }
+
+
+  .loader {
+    border: solid 1px blue;
+    text-align: center;
+    vertical-align: middle;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+    font-size: 120px !important;
+  }
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}

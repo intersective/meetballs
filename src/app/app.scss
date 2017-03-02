@@ -1,0 +1,152 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face{
+  font-family: Raleway;
+  src: url('../assets/fonts/raleway.woff2') format('woff2');
+}
+
+*{
+  font-family: Raleway;
+}
+
+.row{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.container {
+  width: 200px;
+  height: 220px;
+  position: relative;
+}
+
+.square {
+  transform: rotate(45deg);
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.one {
+  top: 30px;
+  left: 30px;
+  background-color: #d7eef5;
+  animation-name: fade-in-one;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.two {
+  top: 30px;
+  left: 70px;
+  background-color: #c0e5f0;
+  animation-name: fade-in-two;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.three {
+  top: 70px;
+  left: 50px;
+  background-color: #7fd2e3;
+  animation-name: fade-in-three;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade-in-one {
+  0% {
+    opacity: 0
+  }
+  10% {
+    opacity: 0.5
+  }
+  20% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-two {
+  20% {
+    opacity: 0
+  }
+  30% {
+    opacity: 0.5
+  }
+  40% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-three {
+  40% {
+    opacity: 0
+  }
+  50% {
+    opacity: 0.5
+  }
+  60% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.text{
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  bottom: 0px;
+  text-shadow: #EEEE00 0 0 10px;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.loading-wrapper{
+  transform: scale(0.6) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}

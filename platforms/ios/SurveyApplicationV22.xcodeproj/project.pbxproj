@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+/* Begin PBXBuildFile section */
+		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
+		0A0A6236D85643679E49FFD5 /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6E9C64E3FE498EA0CCD1AE /* GoogleNetworkingUtilities.framework */; };
+		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1DBD37ED5628416B9F56B352 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E906201F3EC48DDABDF791C /* IonicKeyboard.m */; };
+		276FBBFBD5F64F67B3561FA6 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BEAE68E2A4EC5A080D7A4 /* CDVViewController+SplashScreen.m */; };
+		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
+		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
+		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
+		31FC71DBE2D8410D896C5AC5 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A12B87705CB40F29D3971DB /* CDVDevice.m */; };
+		34EF04FE049E4069B39C540C /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AB41A2ED1749A5A21E2F30 /* GoogleUtilities.framework */; };
+		408F223BE9B5497FAFADFAE6 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C32A8C7F494EFDBF757B00 /* GoogleSignIn.framework */; };
+		4099E4430C0E493A998899C6 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027CAC97099142DEA30965EA /* GoogleSymbolUtilities.framework */; };
+		48CE5158ACF143F099C9B46F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783009B9929B42A382B20822 /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		64DC86CAF4DA4B0AA979C51D /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFF56A9CC7D44219A7E5699 /* GoogleAppUtilities.framework */; };
+		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
+		7271E9F8937940A2B7B7B50A /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E54B9EB2C44E43A030BE8C /* SafariServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8067AB7A9F924E50B1C2BB89 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC7D8C835224BD4B0D6C131 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8E4CC94845644EE5A28D7411 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA0FE82A53D4723BC4E2FE3 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		950490FC1F1246A4922385A5 /* SurveyApplicationV22.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = A631259E40644E1D8FD6D8FD /* SurveyApplicationV22.entitlements */; };
+		A69CD415F3AA4F12AB45DB38 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 543FEC17CD914E639E0D1A73 /* CDVLogger.m */; };
+		B9EA9F199CEA4FB4A799A097 /* GooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7217008F66334BFCA6A7BA31 /* GooglePlus.m */; };
+		BB2231D8B30A44F2A2D62FE3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B432FDF39F741CABC2785F1 /* CoreText.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C440AFFA96554B8DA5C31666 /* GoogleAuthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421F939C128240EA9F81372A /* GoogleAuthUtilities.framework */; };
+		D5EA727E5CA843EBABF1EAFE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCC4E26A638465BA2604D43 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EF22A761B4F5490380835833 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 271ECE3C50CA4C4E875C6B7B /* CDVStatusBar.m */; };
+		F871594D7D1D4121A928D1D4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E26B0B8266974816B17E587D /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FD5302C58A9B4240868DD054 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A67938040438A9C42E81D /* CDVSplashScreen.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		301BF534109A57CC0062928A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = CordovaLib;
+		};
+		301BF550109A68C00062928A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = CordovaLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SurveyApplicationV22/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		027CAC97099142DEA30965EA /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = "SurveyApplicationV22/Plugins/cordova-plugin-googleplus/GoogleSymbolUtilities.framework"; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* SurveyApplicationV22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApplicationV22.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		271ECE3C50CA4C4E875C6B7B /* CDVStatusBar.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVStatusBar.m; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E906201F3EC48DDABDF791C /* IonicKeyboard.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = IonicKeyboard.m; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; };
+		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
+		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
+		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		302D95EF14D2391D003F00A1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		302D95F014D2391D003F00A1 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		3047A50F1AB8059700498E2A /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-debug.xcconfig"; path = "cordova/build-debug.xcconfig"; sourceTree = SOURCE_ROOT; };
+		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = "cordova/build-release.xcconfig"; sourceTree = SOURCE_ROOT; };
+		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
+		32CA4F630368D1EE00C91783 /* SurveyApplicationV22-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SurveyApplicationV22-Prefix.pch"; sourceTree = "<group>"; };
+		37968E5A310F4AD69ABA1F63 /* CDVSplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; };
+		3B432FDF39F741CABC2785F1 /* CoreText.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		3F4A67938040438A9C42E81D /* CDVSplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVSplashScreen.m; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; };
+		421F939C128240EA9F81372A /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleAuthUtilities.framework; path = "SurveyApplicationV22/Plugins/cordova-plugin-googleplus/GoogleAuthUtilities.framework"; sourceTree = "<group>"; };
+		4A1BEAE68E2A4EC5A080D7A4 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; };
+		543FEC17CD914E639E0D1A73 /* CDVLogger.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVLogger.m; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; };
+		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = SurveyApplicationV22/CDVLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		6D6E9C64E3FE498EA0CCD1AE /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = "SurveyApplicationV22/Plugins/cordova-plugin-googleplus/GoogleNetworkingUtilities.framework"; sourceTree = "<group>"; };
+		7217008F66334BFCA6A7BA31 /* GooglePlus.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GooglePlus.m; path = "cordova-plugin-googleplus/GooglePlus.m"; sourceTree = "<group>"; };
+		783009B9929B42A382B20822 /* AddressBook.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		7A12B87705CB40F29D3971DB /* CDVDevice.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVDevice.m; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; };
+		7CC7D8C835224BD4B0D6C131 /* SystemConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8D1107310486CEB800E47090 /* SurveyApplicationV22-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SurveyApplicationV22-Info.plist"; path = "SurveyApplicationV22/SurveyApplicationV22-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
+		92AB41A2ED1749A5A21E2F30 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = "SurveyApplicationV22/Plugins/cordova-plugin-googleplus/GoogleUtilities.framework"; sourceTree = "<group>"; };
+		A631259E40644E1D8FD6D8FD /* SurveyApplicationV22.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; path = SurveyApplicationV22.entitlements; sourceTree = "<group>"; };
+		B8E54B9EB2C44E43A030BE8C /* SafariServices.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		B95B76DEC6A147EDA916DE2E /* IonicKeyboard.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = IonicKeyboard.h; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; };
+		BB43C87B476D4C8A9C50B640 /* GooglePlus.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GooglePlus.h; path = "cordova-plugin-googleplus/GooglePlus.h"; sourceTree = "<group>"; };
+		BFCC4E26A638465BA2604D43 /* Security.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C1C32A8C7F494EFDBF757B00 /* GoogleSignIn.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = "SurveyApplicationV22/Plugins/cordova-plugin-googleplus/GoogleSignIn.framework"; sourceTree = "<group>"; };
+		DCFF56A9CC7D44219A7E5699 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = "SurveyApplicationV22/Plugins/cordova-plugin-googleplus/GoogleAppUtilities.framework"; sourceTree = "<group>"; };
+		DE7B1F795283478D872C36DA /* CDVDevice.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVDevice.h; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; };
+		E26B0B8266974816B17E587D /* libz.dylib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
+		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
+		EBA0FE82A53D4723BC4E2FE3 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EC814F6E79A94C259DF92273 /* CDVStatusBar.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVStatusBar.h; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; };
+		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		ED921F80B8CF4235A9ACDCE3 /* CDVLogger.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVLogger.h; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; };
+		F7CCA94E211C466D9D124651 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; };
+		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = SurveyApplicationV22/config.xml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				64DC86CAF4DA4B0AA979C51D /* GoogleAppUtilities.framework in Frameworks */,
+				C440AFFA96554B8DA5C31666 /* GoogleAuthUtilities.framework in Frameworks */,
+				0A0A6236D85643679E49FFD5 /* GoogleNetworkingUtilities.framework in Frameworks */,
+				408F223BE9B5497FAFADFAE6 /* GoogleSignIn.framework in Frameworks */,
+				4099E4430C0E493A998899C6 /* GoogleSymbolUtilities.framework in Frameworks */,
+				34EF04FE049E4069B39C540C /* GoogleUtilities.framework in Frameworks */,
+				48CE5158ACF143F099C9B46F /* AddressBook.framework in Frameworks */,
+				BB2231D8B30A44F2A2D62FE3 /* CoreText.framework in Frameworks */,
+				7271E9F8937940A2B7B7B50A /* SafariServices.framework in Frameworks */,
+				D5EA727E5CA843EBABF1EAFE /* Security.framework in Frameworks */,
+				8067AB7A9F924E50B1C2BB89 /* SystemConfiguration.framework in Frameworks */,
+				8E4CC94845644EE5A28D7411 /* libz.tbd in Frameworks */,
+				F871594D7D1D4121A928D1D4 /* libz.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				302D95EE14D2391D003F00A1 /* MainViewController.h */,
+				302D95EF14D2391D003F00A1 /* MainViewController.m */,
+				302D95F014D2391D003F00A1 /* MainViewController.xib */,
+				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				1D3623250D0F684500981E51 /* AppDelegate.m */,
+			);
+			name = Classes;
+			path = SurveyApplicationV22/Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* SurveyApplicationV22.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				EB87FDF41871DAF40020F90C /* config.xml */,
+				EB87FDF31871DA8E0020F90C /* www */,
+				EB87FDF11871DA420020F90C /* Staging */,
+				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				307C750510C5A3420062BCA9 /* Plugins */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* SurveyApplicationV22-Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */,
+			);
+			name = "Other Sources";
+			path = SurveyApplicationV22;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0207DA571B56EA530066E2B4 /* Images.xcassets */,
+				3047A50E1AB8057F00498E2A /* config */,
+				8D1107310486CEB800E47090 /* SurveyApplicationV22-Info.plist */,
+				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
+				A631259E40644E1D8FD6D8FD /* SurveyApplicationV22.entitlements */,
+			);
+			name = Resources;
+			path = SurveyApplicationV22/Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCFF56A9CC7D44219A7E5699 /* GoogleAppUtilities.framework */,
+				421F939C128240EA9F81372A /* GoogleAuthUtilities.framework */,
+				6D6E9C64E3FE498EA0CCD1AE /* GoogleNetworkingUtilities.framework */,
+				C1C32A8C7F494EFDBF757B00 /* GoogleSignIn.framework */,
+				027CAC97099142DEA30965EA /* GoogleSymbolUtilities.framework */,
+				92AB41A2ED1749A5A21E2F30 /* GoogleUtilities.framework */,
+				783009B9929B42A382B20822 /* AddressBook.framework */,
+				3B432FDF39F741CABC2785F1 /* CoreText.framework */,
+				B8E54B9EB2C44E43A030BE8C /* SafariServices.framework */,
+				BFCC4E26A638465BA2604D43 /* Security.framework */,
+				7CC7D8C835224BD4B0D6C131 /* SystemConfiguration.framework */,
+				EBA0FE82A53D4723BC4E2FE3 /* libz.tbd */,
+				E26B0B8266974816B17E587D /* libz.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		301BF52E109A57CC0062928A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				301BF535109A57CC0062928A /* libCordova.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3047A50E1AB8057F00498E2A /* config */ = {
+			isa = PBXGroup;
+			children = (
+				3047A50F1AB8059700498E2A /* build-debug.xcconfig */,
+				3047A5101AB8059700498E2A /* build-release.xcconfig */,
+				3047A5111AB8059700498E2A /* build.xcconfig */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+		307C750510C5A3420062BCA9 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				543FEC17CD914E639E0D1A73 /* CDVLogger.m */,
+				ED921F80B8CF4235A9ACDCE3 /* CDVLogger.h */,
+				7A12B87705CB40F29D3971DB /* CDVDevice.m */,
+				DE7B1F795283478D872C36DA /* CDVDevice.h */,
+				3F4A67938040438A9C42E81D /* CDVSplashScreen.m */,
+				4A1BEAE68E2A4EC5A080D7A4 /* CDVViewController+SplashScreen.m */,
+				37968E5A310F4AD69ABA1F63 /* CDVSplashScreen.h */,
+				F7CCA94E211C466D9D124651 /* CDVViewController+SplashScreen.h */,
+				271ECE3C50CA4C4E875C6B7B /* CDVStatusBar.m */,
+				EC814F6E79A94C259DF92273 /* CDVStatusBar.h */,
+				2E906201F3EC48DDABDF791C /* IonicKeyboard.m */,
+				B95B76DEC6A147EDA916DE2E /* IonicKeyboard.h */,
+				7217008F66334BFCA6A7BA31 /* GooglePlus.m */,
+				BB43C87B476D4C8A9C50B640 /* GooglePlus.h */,
+			);
+			name = Plugins;
+			path = SurveyApplicationV22/Plugins;
+			sourceTree = SOURCE_ROOT;
+		};
+		EB87FDF11871DA420020F90C /* Staging */ = {
+			isa = PBXGroup;
+			children = (
+				F840E1F0165FE0F500CFE078 /* config.xml */,
+				301BF56E109A69640062928A /* www */,
+			);
+			name = Staging;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* SurveyApplicationV22 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SurveyApplicationV22" */;
+			buildPhases = (
+				304B58A110DAC018002A0835 /* Copy www directory */,
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301BF551109A68C00062928A /* PBXTargetDependency */,
+			);
+			name = SurveyApplicationV22;
+			productName = SurveyApplicationV22;
+			productReference = 1D6058910D05DD3D006BFB54 /* SurveyApplicationV22.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 510;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = YX5DV8GPWW;
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SurveyApplicationV22" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 301BF52E109A57CC0062928A /* Products */;
+					ProjectRef = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* SurveyApplicationV22 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		301BF535109A57CC0062928A /* libCordova.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCordova.a;
+			remoteRef = 301BF534109A57CC0062928A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
+				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
+				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+				950490FC1F1246A4922385A5 /* SurveyApplicationV22.entitlements in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		304B58A110DAC018002A0835 /* Copy www directory */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy www directory";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "NODEJS_PATH=/usr/local/bin; NVM_NODE_PATH=~/.nvm/versions/node/`nvm version 2>/dev/null`/bin; N_NODE_PATH=`find /usr/local/n/versions/node/* -maxdepth 0 -type d 2>/dev/null | tail -1`/bin; XCODE_NODE_PATH=`xcode-select --print-path`/usr/share/xcs/Node/bin; PATH=$NODEJS_PATH:$NVM_NODE_PATH:$N_NODE_PATH:$XCODE_NODE_PATH:$PATH && node cordova/lib/copy-www-build-step.js";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
+				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				A69CD415F3AA4F12AB45DB38 /* CDVLogger.m in Sources */,
+				31FC71DBE2D8410D896C5AC5 /* CDVDevice.m in Sources */,
+				FD5302C58A9B4240868DD054 /* CDVSplashScreen.m in Sources */,
+				276FBBFBD5F64F67B3561FA6 /* CDVViewController+SplashScreen.m in Sources */,
+				EF22A761B4F5490380835833 /* CDVStatusBar.m in Sources */,
+				1DBD37ED5628416B9F56B352 /* IonicKeyboard.m in Sources */,
+				B9EA9F199CEA4FB4A799A097 /* GooglePlus.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		301BF551109A68C00062928A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CordovaLib;
+			targetProxy = 301BF550109A68C00062928A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = SurveyApplicationV22/Resources/SurveyApplicationV22.entitlements;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = YX5DV8GPWW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SurveyApplicationV22/SurveyApplicationV22-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "SurveyApplicationV22/SurveyApplicationV22-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_NAME = SurveyApplicationV22;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3047A5101AB8059700498E2A /* build-release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = SurveyApplicationV22/Resources/SurveyApplicationV22.entitlements;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = YX5DV8GPWW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+					"\"SurveyApplicationV22/Plugins/cordova-plugin-googleplus\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SurveyApplicationV22/SurveyApplicationV22-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "SurveyApplicationV22/SurveyApplicationV22-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_NAME = SurveyApplicationV22;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3047A5111AB8059700498E2A /* build.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SurveyApplicationV22/Resources/SurveyApplicationV22.entitlements;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3047A5111AB8059700498E2A /* build.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SurveyApplicationV22/Resources/SurveyApplicationV22.entitlements;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SurveyApplicationV22" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SurveyApplicationV22" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,18 @@
+meetball-button {
+  .meetBall{
+    font-size: 9vw;
+    display: inline-block;
+    width: 20vw;
+    height: 20vw;
+    padding-top: 5px !important;
+  }
+
+  ion-col[width-20]{
+    margin: 0 0.2vw;
+    padding: 0vw;
+  }
+
+  ion-grid{
+    padding: 0px;
+  }
+}
