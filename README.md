@@ -1,6 +1,11 @@
 # meetballs
 A meeting feedback tool
 
+Prerequisite
+------------------
+Ionic Framework Version 2.1.0
+
+
 Installation
 ------------------
 1. Build iOS:
