@@ -17,6 +17,7 @@
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
+.idea/*
 
 # Gradle:
 .idea/**/gradle.xml
@@ -56,7 +57,7 @@ fabric.properties
 # End of https://www.gitignore.io/api/webstorm
 
 # Ignore node_modules folder
-node_modules
+node_modules/*
 
 # Ignore temporary files
 .tmp-custom-icons
