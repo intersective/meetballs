@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
+import {UserStorage} from "./user-storage";
 
 declare var _paq: any;
 
 @Injectable()
 export class DataProcessor {
 
-    constructor() {
+    constructor(private userStorage: UserStorage) {
     }
 
     hasUserVoted(resp, email){
@@ -360,5 +361,49 @@ export class DataProcessor {
             Keys[cur[key]].events.push(cur);
         }
         return newArr;
+    }
+
+    processLogIn(data?){
+        let fakeData = {
+            "success": true,
+            "tutorial": true,
+            "apikey": "7xxxxxxxa3fdxxxx9330a6",
+            "Timelines": [
+                {
+                    "Timeline": {
+                        "id": 5,
+                        "title": "Phase 1 2016S2",
+                        "start_date": "2016-10-23",
+                        "state": 1
+                    },
+                    "Program": {
+                        "id": 4,
+                        "name": "Job Smart Phase 1",
+                        "max_achievable_points": 500
+                    }
+                },
+                {
+                    "Timeline": {
+                        "id": 4,
+                        "title": "Final_configuration",
+                        "start_date": "2016-09-25",
+                        "state": 0
+                    },
+                    "Program": {
+                        "id": 3,
+                        "name": "Jobsmart Phase 2",
+                        "max_achievable_points": 1000
+                    }
+                }
+            ],
+            "Teams": [
+                {
+                    "id": 1,
+                    "name": "Team 1"
+                }
+            ]
+        };
+
+        this.userStorage.setPracteraUser(fakeData);
     }
 }

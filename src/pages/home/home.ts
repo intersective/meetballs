@@ -5,6 +5,7 @@ import {EventListPage} from "../event-list/event-list";
 import {GoogleApi} from "../../providers/google-api";
 import {UserStorage} from "../../providers/user-storage";
 import {CustomLoading} from "../../providers/custom-loading";
+import {PracteraApi} from "../../providers/practera-api";
 declare var _paq: any;
 
 @Component({
@@ -13,39 +14,34 @@ declare var _paq: any;
 })
 
 export class HomePage {
-    constructor(public navCtrl: NavController, private googleApi: GoogleApi,
+    private email;
+    private password;
+
+    constructor(public navCtrl: NavController, private prateraApi: PracteraApi,
                 private userStorage: UserStorage, private customLoading: CustomLoading) {
 
     }
 
     ionViewDidLoad(){
-        // this.userStorage.setUser({
-        //     email: "alex.dang.interns@intersective.com"
-        // });
-        // this.navCtrl.push(EventListPage);
-
-        let subscription = this.googleApi.trySilenceLogIn();
-        subscription.subscribe(
-            user => {
-                this.userStorage.setUser(user);
-                _paq.push(['trackEvent', 'Account', user.email]);
-                this.navCtrl.push(EventListPage);
-            });
+        //TODO: silence log in
     }
 
-    doGoogleLogin(){
+    doPracteraLogin(){
+        this.email = "meetballs@intersective.com";
+        this.password = "12341234";
+
         this.customLoading.show("Please wait...");
-        let subscription = this.googleApi.logIn();
-        subscription.subscribe(
-            user => {
-                this.userStorage.setUser(user);
-                _paq.push(['trackEvent', 'Account', user.email]);
+        let observer = this.prateraApi.logIn(this.email, this.password);
+
+        observer.subscribe(
+            data =>{
                 this.customLoading.dismiss();
                 this.navCtrl.push(EventListPage);
             },
-            error => {
+            err =>{
                 this.customLoading.dismiss();
-                alert(error);
-            });
+                alert(err);
+            }
+        );
     }
 }

@@ -20,6 +20,7 @@ import {CustomLoading} from "../providers/custom-loading";
 import {LeaderBoardPage} from "../pages/leader-board/leader-board";
 import { SwiperModule } from 'angular2-swiper-wrapper';
 import { SwiperConfigInterface } from 'angular2-swiper-wrapper';
+import {PracteraApi} from "../providers/practera-api";
 
 const SWIPER_CONFIG: SwiperConfigInterface = {
     direction: 'horizontal',
@@ -61,6 +62,6 @@ const SWIPER_CONFIG: SwiperConfigInterface = {
         MeetballButtonComponent,
         MeetballAvatarComponent
     ],
-    providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, GoogleApi, UserStorage, SheetsuApi, DataProcessor, CustomLoading]
+    providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, GoogleApi, UserStorage, SheetsuApi, DataProcessor, CustomLoading, PracteraApi]
 })
 export class AppModule {}

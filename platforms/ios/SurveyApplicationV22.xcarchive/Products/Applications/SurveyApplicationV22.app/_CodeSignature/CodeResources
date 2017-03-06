@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		w7mAz5n238et2oIDCplOHG3FLhE=
+		DyZXG6wj9ne70YipRsSqLsfr5X4=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		RqsaNfvDea7XXd3idKolB9wNPBQ=
+		mGzbSrZ3EZJTRkIxq+CerTYdXb0=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		DIZ1JdAfSBi1b/3LBOK1zmJvfpY=
+		n51dN29qC7XLBNOlavBzr5fig18=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		AuHtHqPvxJO/tC7ftd/gkffjeyo=
+		fY7V8SvcUMXc/3HF8Ubh6YsLKHc=
 		</data>
 		<key>www/assets/assets/raleway.woff2</key>
 		<data>
@@ -186,23 +186,23 @@
 		</data>
 		<key>www/assets/fonts/CustomIcon.eot</key>
 		<data>
-		HWZne8EZCwrVZYtC5FCicF+3DYE=
+		UjXD/IXSSa2D0/95p2Emy/VfyKY=
 		</data>
 		<key>www/assets/fonts/CustomIcon.svg</key>
 		<data>
-		lDcbEwH31yx3p0t+0NkVYUfJwZA=
+		PXciv0oVBBafHUGoCrXJ99di3yQ=
 		</data>
 		<key>www/assets/fonts/CustomIcon.ttf</key>
 		<data>
-		QvHHvifrVNxmfXM2tMpGAhz12+A=
+		i+dbfw/Ibxe38tI6QyAl5HP+Rl8=
 		</data>
 		<key>www/assets/fonts/CustomIcon.woff</key>
 		<data>
-		abQ+pjrn1O/JbDxiCUYnWRLyg3Q=
+		4qcoACUoASXo4S/9qfUPKaw2pYo=
 		</data>
 		<key>www/assets/fonts/CustomIcon.woff2</key>
 		<data>
-		J7xX72LU6l9JPVtwkV2GeAQiu78=
+		NbEom6VZ7LeMF+Vbdest69BLorw=
 		</data>
 		<key>www/assets/fonts/ionicons.eot</key>
 		<data>
@@ -232,13 +232,21 @@
 		<data>
 		VjvZgsz1sFxiNMQKV1jdovGRYPs=
 		</data>
+		<key>www/assets/fonts/noto-sans-bold.woff</key>
+		<data>
+		Ize8i9CbRr1ngscDVtBHRabDlKc=
+		</data>
 		<key>www/assets/fonts/noto-sans-regular.ttf</key>
 		<data>
 		gwlTxnjmpQaXEIqch9IpzvEwl1o=
 		</data>
+		<key>www/assets/fonts/noto-sans-regular.woff</key>
+		<data>
+		q+qHOMXsbtOmlCzvXEiKE9MOx+E=
+		</data>
 		<key>www/assets/fonts/noto-sans.scss</key>
 		<data>
-		m9cBcBWwqzJYv01VtS2AazzYbuw=
+		EploxEmrzS6JjXiek25ICv5xzQE=
 		</data>
 		<key>www/assets/fonts/raleway.woff2</key>
 		<data>
@@ -252,6 +260,10 @@
 		<data>
 		YieZSJ6X5BjIlny/HgEdzoNOFPo=
 		</data>
+		<key>www/assets/fonts/roboto-bold.woff2</key>
+		<data>
+		lAbeJkaiUq8VPjx+CAcdpT2opZE=
+		</data>
 		<key>www/assets/fonts/roboto-light.ttf</key>
 		<data>
 		8joEE/3XARd1LPc2edLFhnCV6qw=
@@ -259,6 +271,10 @@
 		<key>www/assets/fonts/roboto-light.woff</key>
 		<data>
 		mHcxYm/u/BQM8X//Qb0yEzEtb5k=
+		</data>
+		<key>www/assets/fonts/roboto-light.woff2</key>
+		<data>
+		DB3NYdb13cdoFc6cDxLbTrimoBQ=
 		</data>
 		<key>www/assets/fonts/roboto-medium.ttf</key>
 		<data>
@@ -268,6 +284,10 @@
 		<data>
 		MIeyABWSUXDmXPK2wf2/DNTsOzs=
 		</data>
+		<key>www/assets/fonts/roboto-medium.woff2</key>
+		<data>
+		ODo5Z9q460GSWdFMdVeS2alYY0Y=
+		</data>
 		<key>www/assets/fonts/roboto-regular.ttf</key>
 		<data>
 		iee/JxkNYse1CNySxwEsEYBFj04=
@@ -276,9 +296,13 @@
 		<data>
 		STKhtVvU86PcyV2zPsB7pynobGE=
 		</data>
+		<key>www/assets/fonts/roboto-regular.woff2</key>
+		<data>
+		xdU+YqR2Fpus2XRZ+BcsB3aYjYw=
+		</data>
 		<key>www/assets/fonts/roboto.scss</key>
 		<data>
-		syyM+ZverpEFGsYs9TmvuNz8FSA=
+		mVn8X55jqWJGRnt+TQeFdxp1qk4=
 		</data>
 		<key>www/assets/icon/favicon.ico</key>
 		<data>
@@ -298,7 +322,7 @@
 		</data>
 		<key>www/assets/img/background.png</key>
 		<data>
-		ILX0Wy41v2srmFdqUoxkUgyNFaI=
+		UxUKpqwN9zmY2Jca0vK4c6mJJVc=
 		</data>
 		<key>www/assets/img/beau@intersective.com.png</key>
 		<data>
@@ -378,15 +402,19 @@
 		</data>
 		<key>www/build/main.css</key>
 		<data>
-		nGJ0sDULfWFz1qruWrxuSGJYXq8=
+		3Gjz3JHhG+09OHdMTTdVmjEedRg=
+		</data>
+		<key>www/build/main.css.map</key>
+		<data>
+		K+iMpCQsduglOsYkdIUQZQMtaDM=
 		</data>
 		<key>www/build/main.js</key>
 		<data>
-		43to4LlygVQyh2bJ5BTi0TcWmUY=
+		PVqRTiFQQEiRDa2klcog9oykPdk=
 		</data>
 		<key>www/build/main.js.map</key>
 		<data>
-		By8ZNTa463SqzW40s8VSbIeTv+M=
+		fTWMICW1Y4GGUChjdxXaWkkG6V0=
 		</data>
 		<key>www/build/polyfills.js</key>
 		<data>
@@ -394,7 +422,7 @@
 		</data>
 		<key>www/build/sw-toolbox.js</key>
 		<data>
-		JCYZO2+L7oEx+jBl8WCjgEfjM+s=
+		T1qyFAGAzjWMGMIjeesugfjtGAw=
 		</data>
 		<key>www/cordova-js-src/exec.js</key>
 		<data>
@@ -412,109 +440,9 @@
 		<data>
 		DulOiCYmiddh2KYA/5EwhByXHGA=
 		</data>
-		<key>www/img/1.png</key>
-		<data>
-		sW6REfZ+HOdxWW2n9bmTdfajqQ8=
-		</data>
-		<key>www/img/2.png</key>
-		<data>
-		drxZhIVJZWhI7xMIeGf2eoSPKZU=
-		</data>
-		<key>www/img/Sweety.chetan.harpal.interns@intersective.com.png</key>
-		<data>
-		3ANd4i5J3zwrT7iVpmeiQ+gja7A=
-		</data>
-		<key>www/img/alex.dang.interns@intersective.com.png</key>
-		<data>
-		wW3uSTIDIwKGbia+p3Qk+MlwhjA=
-		</data>
-		<key>www/img/alison@intersective.com.png</key>
-		<data>
-		Yyk3bLrJoTZ0vRx1pnZqHNoYflU=
-		</data>
-		<key>www/img/background.png</key>
-		<data>
-		ILX0Wy41v2srmFdqUoxkUgyNFaI=
-		</data>
-		<key>www/img/beau@intersective.com.png</key>
-		<data>
-		rQJ6EAGhmZZ/gTVEaH4gDA5HjnY=
-		</data>
-		<key>www/img/chaw@intersective.com.png</key>
-		<data>
-		C22jnSD7J3NunRj90eJ0qvpjNX4=
-		</data>
-		<key>www/img/damon@intersective.com.png</key>
-		<data>
-		IzkJpmH5i2KDLf5ZYwY4SSuiwpk=
-		</data>
-		<key>www/img/emma@intersective.com.png</key>
-		<data>
-		ETyyo+kSkvgq4oYTBczNfBj31HI=
-		</data>
-		<key>www/img/g.png</key>
-		<data>
-		BV1RRzYlfpsC58PEky9EBwtrAhA=
-		</data>
-		<key>www/img/google-button.png</key>
-		<data>
-		l+54qit21mxtWQ/NzckA+OvIEPE=
-		</data>
-		<key>www/img/hayley@intersective.com.png</key>
-		<data>
-		cTNEkH8wXGkyydMmbemXrjzEa8M=
-		</data>
-		<key>www/img/jason@intersective.com.png</key>
-		<data>
-		MT0KrzuyMC2D6lCHE04rTCJYVXo=
-		</data>
-		<key>www/img/jessica.zhao.interns@intersective.com.png</key>
-		<data>
-		uYS4vSCJl/8w1BvEPtEpNssc1so=
-		</data>
-		<key>www/img/jun.lee.interns@intersective.com.png</key>
-		<data>
-		hvaMZo3H8dUALWOzSXqa39JrYEI=
-		</data>
-		<key>www/img/phil@intersective.com.png</key>
-		<data>
-		uLyhHzWWb/A8+9/aywHZq9lCYQA=
-		</data>
-		<key>www/img/rachel@intersective.com.png</key>
-		<data>
-		kCyKdfR+xIF1Y6WISRBwQFhi5gU=
-		</data>
-		<key>www/img/rocky@intersective.com.png</key>
-		<data>
-		qTA3lDjLIto1hu0CTFsWePwriu4=
-		</data>
-		<key>www/img/shawn@intersective.com.png</key>
-		<data>
-		wP2SZocAYuDprCWnd2ddDZE76uU=
-		</data>
-		<key>www/img/srujana@intersective.com.png</key>
-		<data>
-		F0MXJ1JGOtfj80YYC+mgYmywVsI=
-		</data>
-		<key>www/img/suzy@intersective.com.png</key>
-		<data>
-		pqDYag9bSWI/3HgTV6uoT6J4eZQ=
-		</data>
-		<key>www/img/tobias@intersective.com.png</key>
-		<data>
-		wIKUChvWuL5IMXkFr+TZrbi/BmI=
-		</data>
-		<key>www/img/wes@intersective.com.png</key>
-		<data>
-		wW3uSTIDIwKGbia+p3Qk+MlwhjA=
-		</data>
-		<key>www/img/zaw@intersective.com.png</key>
-		<data>
-		9wEYuDT/CJFTagt/I5eSfHntwt4=
-		</data>
 		<key>www/index.html</key>
 		<data>
-		yD5FxZfViIj3jM4jGcHLicSwjDc=
+		6Nth4tsHFL5m2WBiYGQsofz5/9E=
 		</data>
 		<key>www/manifest.json</key>
 		<data>
@@ -779,11 +707,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w7mAz5n238et2oIDCplOHG3FLhE=
+			DyZXG6wj9ne70YipRsSqLsfr5X4=
 			</data>
 			<key>hash2</key>
 			<data>
-			BmiUiYDcRbJwcbGaEyhI6gTXsmOK146X5Tadmkx1YPM=
+			t1X5eAZDqPV+r9Tc8Jp7acERcecAUbQz6+vZePyU9iw=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -801,11 +729,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RqsaNfvDea7XXd3idKolB9wNPBQ=
+			mGzbSrZ3EZJTRkIxq+CerTYdXb0=
 			</data>
 			<key>hash2</key>
 			<data>
-			GtXxxgh2pAmOFwOiwk/f3jT2saYMtDSrxHuCjbM49tI=
+			XTOQxfNBMAC82qbnyXriiXoCXSJy7EZkfPOD8fZeFO4=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -966,11 +894,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DIZ1JdAfSBi1b/3LBOK1zmJvfpY=
+			n51dN29qC7XLBNOlavBzr5fig18=
 			</data>
 			<key>hash2</key>
 			<data>
-			ekX93mtBRCVRzuIJU6xe6JfYHy6XIUWShlhZcxIcjco=
+			PYD4dtQLebCodNSdTfIJlpT0Ukk/KhAjl0vDXTuvM5M=
 			</data>
 		</dict>
 		<key>SurveyApplicationV22.entitlements</key>
@@ -1010,11 +938,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AuHtHqPvxJO/tC7ftd/gkffjeyo=
+			fY7V8SvcUMXc/3HF8Ubh6YsLKHc=
 			</data>
 			<key>hash2</key>
 			<data>
-			SrGh+mwtHu4OsQa90TNIF8SSncqM1xiphuAunayoryw=
+			cPT3JAOfIynApOkx80T6l6rd0ImnyzsjYg4idYrXPfg=
 			</data>
 		</dict>
 		<key>www/assets/assets/raleway.woff2</key>
@@ -1032,55 +960,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HWZne8EZCwrVZYtC5FCicF+3DYE=
+			UjXD/IXSSa2D0/95p2Emy/VfyKY=
 			</data>
 			<key>hash2</key>
 			<data>
-			VWbAX7v9Q0HTY9UE7oBJ6oOOL1C8CptF+rnADfXPCxo=
+			/M4xDpaVPlYIKk4jDsT+ftoeC4VwuScU9zmYlO1BQ6A=
 			</data>
 		</dict>
 		<key>www/assets/fonts/CustomIcon.svg</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lDcbEwH31yx3p0t+0NkVYUfJwZA=
+			PXciv0oVBBafHUGoCrXJ99di3yQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Is+2LK/krnVS5X7aCxLDpzPHdE4RVKfgSVk9Sfn4Syo=
+			JxZ1vY2V4pOVMwt4dlEOImhz2o13dO+cnGj1NGa+J8g=
 			</data>
 		</dict>
 		<key>www/assets/fonts/CustomIcon.ttf</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QvHHvifrVNxmfXM2tMpGAhz12+A=
+			i+dbfw/Ibxe38tI6QyAl5HP+Rl8=
 			</data>
 			<key>hash2</key>
 			<data>
-			IXm9rx7RPTOOUq1KWmEPJ5ZexKizu3FA9U+JyAs3EoU=
+			ASVMniKx0HOFEwDOZTc+c6EccMUkQuMn4mLNvs5xYZA=
 			</data>
 		</dict>
 		<key>www/assets/fonts/CustomIcon.woff</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			abQ+pjrn1O/JbDxiCUYnWRLyg3Q=
+			4qcoACUoASXo4S/9qfUPKaw2pYo=
 			</data>
 			<key>hash2</key>
 			<data>
-			BI/Hc/7/v7IF4ylgqyPAweRkxfOrfrnb59WGoxHCixE=
+			5+aXJh2RjClSsyh7GkYBG7yDvIe0VB/HmnYLGLRjnjg=
 			</data>
 		</dict>
 		<key>www/assets/fonts/CustomIcon.woff2</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			J7xX72LU6l9JPVtwkV2GeAQiu78=
+			NbEom6VZ7LeMF+Vbdest69BLorw=
 			</data>
 			<key>hash2</key>
 			<data>
-			tHPp5ACsEFoQzeVUk37GJZCVqAOFfwAOBu9gxEXSOYQ=
+			h1puJnyZt0nHuY5OPil83iPIyzvuK+qt9/lXwkuWoyE=
 			</data>
 		</dict>
 		<key>www/assets/fonts/ionicons.eot</key>
@@ -1160,6 +1088,17 @@
 			aL3Veh4eYmY6CzcsciQgS4KomCC5zzA5Ezf2HwxecSM=
 			</data>
 		</dict>
+		<key>www/assets/fonts/noto-sans-bold.woff</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ize8i9CbRr1ngscDVtBHRabDlKc=
+			</data>
+			<key>hash2</key>
+			<data>
+			5dq+38Nh7sZF94nlpI8UIPJ0Z6z/9iBiaPliewE5k6s=
+			</data>
+		</dict>
 		<key>www/assets/fonts/noto-sans-regular.ttf</key>
 		<dict>
 			<key>hash</key>
@@ -1171,15 +1110,26 @@
 			nptMU70lytnATTcPEzpeMtFm0NVOKprWy6SjH804LVs=
 			</data>
 		</dict>
+		<key>www/assets/fonts/noto-sans-regular.woff</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			q+qHOMXsbtOmlCzvXEiKE9MOx+E=
+			</data>
+			<key>hash2</key>
+			<data>
+			7tvqsAYr2IYlLLLC0Ma9ubVDnK5XSV6KXc0yemIBtDo=
+			</data>
+		</dict>
 		<key>www/assets/fonts/noto-sans.scss</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			m9cBcBWwqzJYv01VtS2AazzYbuw=
+			EploxEmrzS6JjXiek25ICv5xzQE=
 			</data>
 			<key>hash2</key>
 			<data>
-			c02a5WK1xaHY8aiSCBkjlKU65UXdy7II2JvEo/jtFwg=
+			xARtZsjVXR2dqKai+q9tNa4zR1+3MvUqY3d9Oa/U+cg=
 			</data>
 		</dict>
 		<key>www/assets/fonts/raleway.woff2</key>
@@ -1215,6 +1165,17 @@
 			VSk/KNoJlrr6GsOHcdUY1kh552xo+ZE+lfBysaPc/Rk=
 			</data>
 		</dict>
+		<key>www/assets/fonts/roboto-bold.woff2</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lAbeJkaiUq8VPjx+CAcdpT2opZE=
+			</data>
+			<key>hash2</key>
+			<data>
+			N+AXlcHfnN1YN/V7/HVPr/JQuQnJGKD92NcaJuVTGZw=
+			</data>
+		</dict>
 		<key>www/assets/fonts/roboto-light.ttf</key>
 		<dict>
 			<key>hash</key>
@@ -1235,6 +1196,17 @@
 			<key>hash2</key>
 			<data>
 			T+lFQzetapjXsOAFi/txfUIR9/YlPVjMaDkB4DSXUXQ=
+			</data>
+		</dict>
+		<key>www/assets/fonts/roboto-light.woff2</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DB3NYdb13cdoFc6cDxLbTrimoBQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			ViaMUoz5MCSdUZyHaz6kaL5XqCaRDf3ug+JNPg7X0bs=
 			</data>
 		</dict>
 		<key>www/assets/fonts/roboto-medium.ttf</key>
@@ -1259,6 +1231,17 @@
 			oIm8Bb68pCpKmYVEb2FMGAF3FxLiWVsfvCsllPVp3I4=
 			</data>
 		</dict>
+		<key>www/assets/fonts/roboto-medium.woff2</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ODo5Z9q460GSWdFMdVeS2alYY0Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			ouVf1b+k7P9cvqnXVEAdE0+40/qI4M//YdwXdB2SgoE=
+			</data>
+		</dict>
 		<key>www/assets/fonts/roboto-regular.ttf</key>
 		<dict>
 			<key>hash</key>
@@ -1281,15 +1264,26 @@
 			rp/vNZDjcpGEIqYS3PmVZdDHynFCD1bdQ0qedZgI1rg=
 			</data>
 		</dict>
+		<key>www/assets/fonts/roboto-regular.woff2</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xdU+YqR2Fpus2XRZ+BcsB3aYjYw=
+			</data>
+			<key>hash2</key>
+			<data>
+			Me2rktSt4perkm0j7SZm0cXyQmdd58DBoLtEcCSsVU0=
+			</data>
+		</dict>
 		<key>www/assets/fonts/roboto.scss</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			syyM+ZverpEFGsYs9TmvuNz8FSA=
+			mVn8X55jqWJGRnt+TQeFdxp1qk4=
 			</data>
 			<key>hash2</key>
 			<data>
-			RL7NGMZPrn/Qb1R5+XbbMTH4aT6dKzEn+r9zffXQNBA=
+			UBvbGTbplF5f4KDXxnAW+kAiyeMyV70VfK5eF+6UPHI=
 			</data>
 		</dict>
 		<key>www/assets/icon/favicon.ico</key>
@@ -1340,11 +1334,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ILX0Wy41v2srmFdqUoxkUgyNFaI=
+			UxUKpqwN9zmY2Jca0vK4c6mJJVc=
 			</data>
 			<key>hash2</key>
 			<data>
-			ofY6wCKi9WyTj+aIeHVd6Rn5ATWYLjERMHQqyng+w48=
+			1DzF/shMq4kph5DfrsrOfIiYSev+mJB6VVE8YFOtB+Y=
 			</data>
 		</dict>
 		<key>www/assets/img/beau@intersective.com.png</key>
@@ -1560,33 +1554,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nGJ0sDULfWFz1qruWrxuSGJYXq8=
+			3Gjz3JHhG+09OHdMTTdVmjEedRg=
 			</data>
 			<key>hash2</key>
 			<data>
-			NSt11ItNgDY/ifhDm9vFsCmvu3fDa4c3MnQ0uKCH9P4=
+			+otXHhagYO+LuyIVyob8kzLAcnEJ9nE90TJJRsMATr4=
+			</data>
+		</dict>
+		<key>www/build/main.css.map</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			K+iMpCQsduglOsYkdIUQZQMtaDM=
+			</data>
+			<key>hash2</key>
+			<data>
+			dCNOmK/nSY+12vHzasLXiswzlGT5UHA7jAGYkvmCuQs=
 			</data>
 		</dict>
 		<key>www/build/main.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			43to4LlygVQyh2bJ5BTi0TcWmUY=
+			PVqRTiFQQEiRDa2klcog9oykPdk=
 			</data>
 			<key>hash2</key>
 			<data>
-			3tB4Icf8c98/vp7tBhJ4Xc53247Ki8JjB8mm+WN31OI=
+			PGNE6DXD0jnEyCs1aUFHga1DMu4P999yIAmAfblKa/s=
 			</data>
 		</dict>
 		<key>www/build/main.js.map</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			By8ZNTa463SqzW40s8VSbIeTv+M=
+			fTWMICW1Y4GGUChjdxXaWkkG6V0=
 			</data>
 			<key>hash2</key>
 			<data>
-			MDF0Xc+cGfFhrIBMduXS+rN1jLkSCnquFdTdPi6/Nfw=
+			eeeTeTUO8MnmvZDXU9AK3RIdUQxd4/QG3Ih9ESajeQQ=
 			</data>
 		</dict>
 		<key>www/build/polyfills.js</key>
@@ -1604,11 +1609,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JCYZO2+L7oEx+jBl8WCjgEfjM+s=
+			T1qyFAGAzjWMGMIjeesugfjtGAw=
 			</data>
 			<key>hash2</key>
 			<data>
-			1S9hzWbpri3y04QD5bfseQFKvic11vQ0Cb6/5kurMS0=
+			hg19xBqGOjskPM73S8+yRFnwodqcHrx8sQJ1vWGZgt4=
 			</data>
 		</dict>
 		<key>www/cordova-js-src/exec.js</key>
@@ -1655,290 +1660,15 @@
 			xJBMoV8KF3PPPq2v1sS9DUdZziTJmpbKcYiPTm7v1Vs=
 			</data>
 		</dict>
-		<key>www/img/1.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sW6REfZ+HOdxWW2n9bmTdfajqQ8=
-			</data>
-			<key>hash2</key>
-			<data>
-			jEB0FYi3XSeB9dOXlCK0PK7LycJoU6hDYvFmTgC3uyY=
-			</data>
-		</dict>
-		<key>www/img/2.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			drxZhIVJZWhI7xMIeGf2eoSPKZU=
-			</data>
-			<key>hash2</key>
-			<data>
-			Sd/MPzcIpS5JEWvunCeN1NqTBML373b3uqr1f8obYX0=
-			</data>
-		</dict>
-		<key>www/img/Sweety.chetan.harpal.interns@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3ANd4i5J3zwrT7iVpmeiQ+gja7A=
-			</data>
-			<key>hash2</key>
-			<data>
-			W5LdXiEX658UJFIK0Ix7mc07ijCoFlmEDwQgCzuOyCY=
-			</data>
-		</dict>
-		<key>www/img/alex.dang.interns@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wW3uSTIDIwKGbia+p3Qk+MlwhjA=
-			</data>
-			<key>hash2</key>
-			<data>
-			1TGjQA/YxlJY8AapxSAXyH88z3W6ZNFl42A0/+LZDsg=
-			</data>
-		</dict>
-		<key>www/img/alison@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Yyk3bLrJoTZ0vRx1pnZqHNoYflU=
-			</data>
-			<key>hash2</key>
-			<data>
-			ltrH8sJX/WLfahoI5dz5ig6ymBCJxC/+eBFG/h8Od2k=
-			</data>
-		</dict>
-		<key>www/img/background.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ILX0Wy41v2srmFdqUoxkUgyNFaI=
-			</data>
-			<key>hash2</key>
-			<data>
-			ofY6wCKi9WyTj+aIeHVd6Rn5ATWYLjERMHQqyng+w48=
-			</data>
-		</dict>
-		<key>www/img/beau@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rQJ6EAGhmZZ/gTVEaH4gDA5HjnY=
-			</data>
-			<key>hash2</key>
-			<data>
-			K81nHPvXHssmJv5W/o/SlziThaR1vF0rPbwbYhOQSU8=
-			</data>
-		</dict>
-		<key>www/img/chaw@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			C22jnSD7J3NunRj90eJ0qvpjNX4=
-			</data>
-			<key>hash2</key>
-			<data>
-			5UthUeabyGGjAy9izGImxp+1nhfIrXfgwRMKu7SJ96g=
-			</data>
-		</dict>
-		<key>www/img/damon@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			IzkJpmH5i2KDLf5ZYwY4SSuiwpk=
-			</data>
-			<key>hash2</key>
-			<data>
-			VIA3OVhPbGqvyiRcgqvsew+7HK/NKg0qHwHsNB0Z5GQ=
-			</data>
-		</dict>
-		<key>www/img/emma@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ETyyo+kSkvgq4oYTBczNfBj31HI=
-			</data>
-			<key>hash2</key>
-			<data>
-			0InYnv+gZ59hFx9Ie3nHZzuM6oog5Wfqdzx05fIqvtY=
-			</data>
-		</dict>
-		<key>www/img/g.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			BV1RRzYlfpsC58PEky9EBwtrAhA=
-			</data>
-			<key>hash2</key>
-			<data>
-			RjcfO6mfjT0d7ktvhHEtU65whVKysOTmeCd9MVWQezs=
-			</data>
-		</dict>
-		<key>www/img/google-button.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			l+54qit21mxtWQ/NzckA+OvIEPE=
-			</data>
-			<key>hash2</key>
-			<data>
-			8GkrIppWlQ69Uj4yf6m3xwABi5xZsqr4HBukSvTfzyc=
-			</data>
-		</dict>
-		<key>www/img/hayley@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			cTNEkH8wXGkyydMmbemXrjzEa8M=
-			</data>
-			<key>hash2</key>
-			<data>
-			lLP8xG6rg3DpdgqHq9ow7s2KpfPWragQbM+hAVwGzug=
-			</data>
-		</dict>
-		<key>www/img/jason@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MT0KrzuyMC2D6lCHE04rTCJYVXo=
-			</data>
-			<key>hash2</key>
-			<data>
-			nKeJn8FvSvoNlIkxgY1HiUPwigr9E0rfhB/UD9LL/Dg=
-			</data>
-		</dict>
-		<key>www/img/jessica.zhao.interns@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uYS4vSCJl/8w1BvEPtEpNssc1so=
-			</data>
-			<key>hash2</key>
-			<data>
-			IuqNy1jbK1AGwcJKOYCK5dNGqepIj7PReDE8XwvD8z8=
-			</data>
-		</dict>
-		<key>www/img/jun.lee.interns@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			hvaMZo3H8dUALWOzSXqa39JrYEI=
-			</data>
-			<key>hash2</key>
-			<data>
-			gOgYs8UzbsBBwMser1kCRcTy28x6XYb90Whwx8NgiwE=
-			</data>
-		</dict>
-		<key>www/img/phil@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uLyhHzWWb/A8+9/aywHZq9lCYQA=
-			</data>
-			<key>hash2</key>
-			<data>
-			BEN8UJgbCCGOm1+NK+L0jcuYJO/MZxXxaW6pE7aDY1Y=
-			</data>
-		</dict>
-		<key>www/img/rachel@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kCyKdfR+xIF1Y6WISRBwQFhi5gU=
-			</data>
-			<key>hash2</key>
-			<data>
-			PvekciCQG2pZdZD1P9mq89DM7f21Lj69u3XbPHK5BXw=
-			</data>
-		</dict>
-		<key>www/img/rocky@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			qTA3lDjLIto1hu0CTFsWePwriu4=
-			</data>
-			<key>hash2</key>
-			<data>
-			Uf/ge71C7PQOrPW82weKPvIb1ZaaBHuocZLlQ16fa9I=
-			</data>
-		</dict>
-		<key>www/img/shawn@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wP2SZocAYuDprCWnd2ddDZE76uU=
-			</data>
-			<key>hash2</key>
-			<data>
-			aRQFpqWM/yq78KI1HgSTbCyEvT6jECIGKOt8nWgO8FY=
-			</data>
-		</dict>
-		<key>www/img/srujana@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			F0MXJ1JGOtfj80YYC+mgYmywVsI=
-			</data>
-			<key>hash2</key>
-			<data>
-			btHzNe+iwTLoNO8uYlAr9qtz4V3VjrHLFsvpe+9dS34=
-			</data>
-		</dict>
-		<key>www/img/suzy@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			pqDYag9bSWI/3HgTV6uoT6J4eZQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			ralFVTdErya3tB9x9NPr/EIkBI646QSu2QuW2HE2CUw=
-			</data>
-		</dict>
-		<key>www/img/tobias@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wIKUChvWuL5IMXkFr+TZrbi/BmI=
-			</data>
-			<key>hash2</key>
-			<data>
-			ne5mcZ385U50BzfEZCe6VfiPz2lAFARaQyIRLpNRAgg=
-			</data>
-		</dict>
-		<key>www/img/wes@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wW3uSTIDIwKGbia+p3Qk+MlwhjA=
-			</data>
-			<key>hash2</key>
-			<data>
-			1TGjQA/YxlJY8AapxSAXyH88z3W6ZNFl42A0/+LZDsg=
-			</data>
-		</dict>
-		<key>www/img/zaw@intersective.com.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9wEYuDT/CJFTagt/I5eSfHntwt4=
-			</data>
-			<key>hash2</key>
-			<data>
-			EOgHJn5ql+R0+U1GjAd9nAcm3vWdTsHOtMcd+/C6sZ0=
-			</data>
-		</dict>
 		<key>www/index.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yD5FxZfViIj3jM4jGcHLicSwjDc=
+			6Nth4tsHFL5m2WBiYGQsofz5/9E=
 			</data>
 			<key>hash2</key>
 			<data>
-			3vbA/3FqkM/ZjJgIHb+0lCFR7EBSmiolG7bs2x5RPkA=
+			Vcx5HWE+sDJCgaiQSBVZY/kdx0FGXowz+ct/wR/vv98=
 			</data>
 		</dict>
 		<key>www/manifest.json</key>

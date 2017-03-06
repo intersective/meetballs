@@ -1,5 +1,17 @@
 <ion-content class="no-scroll background" style="background : #000000 url(assets/img/background.png) no-repeat bottom left;">
-    <button class="loginButton" ion-button  block clear (click)="doGoogleLogin()">
-        Sign in with Google +
-    </button>
+    <div class="form-wrapper">
+        <ion-item class="field-wrapper no-background border-top no-padding">
+            <ion-icon name="person" class="rose"></ion-icon>
+            <input type="text" placeholder="Email" [(ngModel)]="email" class="no-background no-border  width-100">
+        </ion-item>
+
+        <ion-item class="field-wrapper no-background no-padding">
+            <ion-icon name="lock" class="rose"></ion-icon>
+            <input type="password" placeholder="Password" [(ngModel)]="password" class="no-background no-border width-100">
+        </ion-item>
+
+        <button class="loginButton" ion-button  block clear (click)="doPracteraLogin()">
+            Log in
+        </button>
+    </div>
 </ion-content>
