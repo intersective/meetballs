@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Http, Headers} from '@angular/http';
+import {Http, Headers, URLSearchParams} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {ReplaySubject} from "rxjs";
 import {DataProcessor} from "./data-processor";
@@ -12,8 +12,8 @@ import {DataProcessor} from "./data-processor";
  */
 @Injectable()
 export class PracteraApi {
-    private APP_KEY = "771a8452fa";
-    private AUTHS_END_POINT = "sandbox.practera.com"; //"http://intranet.intersective.com/api/auths";
+    private APP_KEY = "6862124bfe";
+    private AUTHS_END_POINT = "https://api.practera.com/api/auths.json";
 
     private replaySubject = new ReplaySubject(1);
 
@@ -25,19 +25,15 @@ export class PracteraApi {
     // save user information to local storage
     public logIn(email, password){
         let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
         headers.append('appkey', this.APP_KEY);
 
-        let data = {
-            "data": {
-                "User": {
-                    "email": email,
-                    "password": password
-                }
-            }
-        }
+        let urlSearchParams = new URLSearchParams();
+        urlSearchParams.append('data[User][email]', email);
+        urlSearchParams.append('data[User][password]', password);
+        let body = urlSearchParams.toString();
 
-        let observer = this.http.post(this.AUTHS_END_POINT,  JSON.stringify(data), {headers: headers});
+        let observer = this.http.post(this.AUTHS_END_POINT,  body, {headers: headers});
         this.replaySubject = new ReplaySubject(1);
         let result;
         observer.map((response:any) => response.json())
@@ -51,6 +47,4 @@ export class PracteraApi {
             )
         return this.replaySubject;
     }
-
-    get
 }

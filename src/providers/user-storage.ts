@@ -14,25 +14,8 @@ export class UserStorage {
         console.log('Hello UserStorage Provider');
     }
 
-    public setUser(user) {
-        let user_data = {
-            userID: user.userId,
-            name: user.displayName,
-            email: user.email,
-            serverAuthCode: user.serverAuthCode,
-            refreshToken: user.refreshToken,
-            picture: user.imageUrl,
-            accessToken: user.accessToken,
-            idToken: user.idToken,
-            expiredIn: Math.floor(Date.now() / 1000) + 3600,
-            tokenType: "Bearer"
-        }
-
-        window.localStorage.setItem("user", JSON.stringify(user_data));
-    }
-
-    public getUser(){
-        return JSON.parse(window.localStorage.getItem("user") || '{}');
+    public clearUser(){
+        window.localStorage.setItem("practeraUser", null);
     }
 
     public setPracteraUser(user){
@@ -45,10 +28,6 @@ export class UserStorage {
 
     public getUserApiKey(){
         let user = this.getPracteraUser();
-        return user ? user.apikey : "";
-    }
-
-    public getTimelines(){
-
+        return user ? user.data.apikey : "";
     }
 }

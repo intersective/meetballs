@@ -15,40 +15,11 @@ page-home {
   }
 
   .loginButton{
-    margin: 5vh 10vw 0 10vw;
+    margin: 0vh 10vw 0 10vw;
     background-color: #cf5959;
     width: 80vw;
     text-align: center;
     color: white;
-  }
-
-  .loader {
-    border: solid 1px blue;
-    text-align: center;
-    vertical-align: middle;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 4s linear infinite;
-    animation: spin 4s linear infinite;
-    font-size: 120px !important;
-  }
-
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
-  .no-background{
-    background: none;
-  }
-
-  .no-border{
-    border: none;
   }
 
   .field-wrapper{
@@ -60,9 +31,16 @@ page-home {
     color: #cf5959;
   }
 
-  .border{
-    border-top: 0.55px solid #c8c7cc;
-    border-bottom: 0.55px solid #c8c7cc;
+  .border-bottom-gray{
+    border-bottom: 0.55px solid #c8c7cc !important;
+  }
+
+  .border-bottom-green{
+    border-bottom: 0.55px solid #00cc13;
+  }
+
+  .border-bottom-red{
+    border-bottom: 0.55px solid #cc0013;
   }
 
   .form-wrapper{
@@ -70,12 +48,25 @@ page-home {
     top: 60vh;
   }
 
-  .no-padding{
-    padding: 0px;
-  }
-
   .width-100{
     width: 100%;
   }
 
+  input.un-touched{
+    border-bottom: 0.55px solid #c8c7cc !important;
+  }
+
+  .error-message * {
+    border: none !important;
+    padding: 0px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+
+    font-size: 5vw;
+  }
+
+  ion-item > .item-inner{
+    padding: 0px !important;
+  }
 }

@@ -29352,6 +29352,22 @@ ion-navbar.toolbar {
   font-family: Raleway;
 }
 
+.no-border {
+  border: none;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.no-background {
+  background: none;
+}
+
 .row {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29797,50 +29813,11 @@ page-home .background {
 }
 
 page-home .loginButton {
-  margin: 5vh 10vw 0 10vw;
+  margin: 0vh 10vw 0 10vw;
   background-color: #cf5959;
   width: 80vw;
   text-align: center;
   color: white;
-}
-
-page-home .loader {
-  border: solid 1px blue;
-  text-align: center;
-  vertical-align: middle;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 4s linear infinite;
-  animation: spin 4s linear infinite;
-  font-size: 120px !important;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-page-home .no-background {
-  background: none;
-}
-
-page-home .no-border {
-  border: none;
 }
 
 page-home .field-wrapper {
@@ -29852,9 +29829,16 @@ page-home .rose {
   color: #cf5959;
 }
 
-page-home .border {
-  border-top: 0.55px solid #c8c7cc;
-  border-bottom: 0.55px solid #c8c7cc;
+page-home .border-bottom-gray {
+  border-bottom: 0.55px solid #c8c7cc !important;
+}
+
+page-home .border-bottom-green {
+  border-bottom: 0.55px solid #00cc13;
+}
+
+page-home .border-bottom-red {
+  border-bottom: 0.55px solid #cc0013;
 }
 
 page-home .form-wrapper {
@@ -29862,12 +29846,31 @@ page-home .form-wrapper {
   top: 60vh;
 }
 
-page-home .no-padding {
-  padding: 0px;
-}
-
 page-home .width-100 {
   width: 100%;
+}
+
+page-home input.un-touched {
+  border-bottom: 0.55px solid #c8c7cc !important;
+}
+
+page-home .error-message * {
+  border: none !important;
+  padding: 0px !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-flex-wrap: wrap !important;
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
+  -webkit-justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  font-size: 5vw;
+}
+
+page-home ion-item > .item-inner {
+  padding: 0px !important;
 }
 
 page-leader-board .toolbar-background {

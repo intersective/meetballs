@@ -1,15 +1,15 @@
 <ion-content class="no-scroll background" style="background : #000000 url(assets/img/background.png) no-repeat bottom left;">
-    <div class="form-wrapper">
-        <ion-item class="field-wrapper no-background border-top no-padding">
-            <ion-icon name="person" class="rose"></ion-icon>
-            <input type="text" placeholder="Email" [(ngModel)]="email" class="no-background no-border  width-100">
+    <div class="form-wrapper" [formGroup]="loginForm">
+        <ion-item class="field-wrapper no-background no-padding" [ngStyle]="{'border-bottom': '0.55px solid ' + emailBorderColor}">
+            <ion-icon name="person" [ngStyle]="{'color': emailBorderColor}" item-left></ion-icon>
+            <ion-input type="email" placeholder="Email" formControlName="email" [(ngModel)]="email" class="no-background no-border width-100" (blur)="onEmailUpdate()" (keydown)="onEmailUpdate()" (focus)="onFocus()" clearInput></ion-input>
         </ion-item>
 
-        <ion-item class="field-wrapper no-background no-padding">
-            <ion-icon name="lock" class="rose"></ion-icon>
-            <input type="password" placeholder="Password" [(ngModel)]="password" class="no-background no-border width-100">
+        <ion-item class="field-wrapper no-background no-padding" [ngStyle]="{'border-bottom': '0.55px solid ' + passwordBorderColor}">
+            <ion-icon name="lock" [ngStyle]="{'color': passwordBorderColor}" item-left></ion-icon>
+            <ion-input type="password" placeholder="Password" formControlName="password" [(ngModel)]="password" class="no-background no-border width-100" (blur)="onPasswordUpdate()" (keydown)="onPasswordUpdate()" (focus)="onFocus()" clearInput></ion-input>
         </ion-item>
-
+        <ion-item class="field-wrapper no-background no-padding rose center error-message"><b>&nbsp;{{errorMessage}}&nbsp;</b></ion-item>
         <button class="loginButton" ion-button  block clear (click)="doPracteraLogin()">
             Log in
         </button>

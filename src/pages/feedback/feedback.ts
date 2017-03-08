@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {UserStorage} from "../../providers/user-storage";
 import {SheetsuApi} from "../../providers/sheetsu-api";
-import {DataProcessor} from "../../providers/data-processor";
 import {ResultPage} from "../result/result";
 import {CustomLoading} from "../../providers/custom-loading";
 
@@ -34,7 +33,7 @@ export class FeedbackPage {
 
     onSubmit(){
         this.customLoading.show("Submitting your feedback...");
-        this.submitData.user_email = this.userStorage.getUser().email;
+        // this.submitData.user_email = this.userStorage.getUser().email;
         this.submitData.event_id = this.navParams.get('event_id');
 
         let subscription = this.sheetsuAPI.addFeedback(this.submitData);
