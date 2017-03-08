@@ -69,4 +69,9 @@ page-home {
   ion-item > .item-inner{
     padding: 0px !important;
   }
+
+  .item-inner {
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+  }
 }
