@@ -13,7 +13,7 @@
             </button>
         </ion-buttons>
 
-        <ion-title><b  style="color: #704d4c;">Meetings</b></ion-title>
+        <ion-title><b  style="color: #704d4c;" (click)="onTimelineClick()">{{timelineTitle}}</b></ion-title>
 
         <ion-buttons end>
             <button ion-button icon-only (click)="onPointsClick()">
@@ -25,7 +25,7 @@
 
 
 <ion-content padding="" >
-    <ion-refresher (ionRefresh)="loadEvents($event)">
+    <ion-refresher (ionRefresh)="loadSession()">
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
     <div *ngFor="let entriesOfDay of entries; let i = index">

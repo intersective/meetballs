@@ -6,6 +6,7 @@ import {CustomLoading} from "../../providers/custom-loading";
 import {PracteraApi} from "../../providers/practera-api";
 import {FormBuilder, Validators} from "@angular/forms";
 import {EmailValidator} from "../../utility/EmailValidator";
+
 declare var _paq: any;
 
 @Component({
@@ -37,8 +38,6 @@ export class HomePage {
     }
 
     ionViewWillEnter(){
-        this.email = "";
-        this.password = "";
         this.errorMessage = null;
 
         this.emailBorderColor = "grey";
@@ -54,17 +53,26 @@ export class HomePage {
         let observer = this.prateraApi.logIn(this.email, this.password);
 
         observer.subscribe(
-            data =>{
-                this.customLoading.dismiss();
-                this.navCtrl.push(EventListPage);
+            () =>{
+                let infoObserver = this.prateraApi.getUserInfo();
+                infoObserver.subscribe(()=>{
+                    this.customLoading.dismiss();
+                    this.navCtrl.push(EventListPage);
+                }, err=>{
+                    this.showError(err);
+                });
             },
             err =>{
-                this.customLoading.dismiss();
-                this.errorMessage = err._body;
-                this.emailBorderColor = "#cc0013";
-                this.passwordBorderColor = "#cc0013";
+                this.showError(err);
             }
         );
+    }
+
+    showError(err){
+        this.customLoading.dismiss();
+        this.errorMessage = err._body;
+        this.emailBorderColor = "#cc0013";
+        this.passwordBorderColor = "#cc0013";
     }
 
     onEmailUpdate(){

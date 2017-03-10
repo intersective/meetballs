@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {
+    NavController, NavParams, ActionSheetController
+} from 'ionic-angular';
 import {UserStorage} from "../../providers/user-storage";
 import {SheetsuApi} from "../../providers/sheetsu-api";
 import {LeaderBoardPage} from "../leader-board/leader-board";
 import {HomePage} from "../home/home";
+import {PracteraApi} from "../../providers/practera-api";
+import {CustomLoading} from "../../providers/custom-loading";
 
 /*
  Generated class for the EventList page.
@@ -20,27 +24,24 @@ import {HomePage} from "../home/home";
 
 export class EventListPage {
     private points;
-
-    constructor(public navCtrl: NavController, private userStorage: UserStorage, private sheetsuAPI:SheetsuApi) {
-
-    }
-
+    private actionSheet;
     private entries;
+    private timelineTitle;
+    private timelineArray;
+
+    constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController,private userStorage: UserStorage,
+                private sheetsuAPI:SheetsuApi, private practeraApi: PracteraApi, private customLoading: CustomLoading) {
+        this.userStorage.setSelectedTimelineIndex(0);
+    }
 
     ionViewDidLoad() {
-
+        this.timelineArray = this.userStorage.getTimelineArray();
+        this.updateTimelineTitle();
+        this.loadSession();
     }
 
-    loadPoints(){
-
-    }
-
-    onPointsClick(){
-        this.navCtrl.push(LeaderBoardPage);
-    }
-
-    loadEvents(refresher){
-
+    updateTimelineTitle(){
+        this.timelineTitle = this.timelineArray[this.userStorage.getSelectedTimelineIndex()].Program.name;
     }
 
     //clear data in user storage
@@ -48,5 +49,71 @@ export class EventListPage {
     logOut(){
         this.userStorage.clearUser();
         this.navCtrl.pop(HomePage);
+    }
+
+    onTimelineClick(){
+        this.actionSheet = this.actionSheetCtrl.create({
+            title: 'Modify your album',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: () => {
+                        console.log('Cancel clicked');
+                    }
+                }
+            ]
+        });
+
+        for(let i = 0; i < this.timelineArray.length; i++){
+            this.actionSheet.addButton({
+                text: this.timelineArray[i].Program.name,
+                handler: () => {
+                    this.onSelectTimeline(i);
+                }
+            });
+        }
+
+        this.actionSheet.present();
+    }
+
+    onSelectTimeline(i){
+        this.userStorage.setSelectedTimelineIndex(i);
+        this.updateTimelineTitle();
+        this.loadSession();
+    }
+
+    loadSession(){
+        this.customLoading.show("Please wait...");
+        let milestoneObservable = this.practeraApi.getMilestones();
+
+        milestoneObservable.subscribe(
+            () =>{
+                let activitiesObservable = this.practeraApi.getActivities();
+
+                activitiesObservable.subscribe(()=>{
+                    let sessionObservable = this.practeraApi.getSession();
+
+                    sessionObservable.subscribe(
+                        data =>{
+                            this.entries = data;
+                            this.customLoading.dismiss();
+                        }, err =>{
+                            this.showError(err);
+                        }
+                    )
+                }, err=>{
+                    this.showError(err);
+                });
+            },
+            err =>{
+                this.showError(err);
+            }
+        );
+    }
+
+    showError(err){
+        this.customLoading.dismiss();
+        alert(err);
     }
 }

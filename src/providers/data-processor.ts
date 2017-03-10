@@ -184,9 +184,12 @@ export class DataProcessor {
                 var endTime = new Date(item.end.dateTime);
 
                 let durationInMinute = Math.floor((endTime.valueOf()  - startTime.valueOf())/60000);
-                let hours = Math.floor(durationInMinute / 60);
-                let minutes = durationInMinute % 60;
-                event['duration'] = (hours > 0 ? hours + " Hour " : "") + (minutes > 0 ? minutes + " Minutes " : "");
+
+                    event['duration'] = "All day"
+
+                    let hours = Math.floor(durationInMinute / 60);
+                    let minutes = durationInMinute % 60;
+                    event['duration'] = (hours > 0 ? hours + " Hour " : "") + (minutes > 0 ? minutes + " Minutes " : "");
 
                 let startHour = startTime.getHours();
                 event['startMinute'] = startTime.getMinutes().toString();
@@ -364,6 +367,83 @@ export class DataProcessor {
     }
 
     processLogIn(data?){
+        this.userStorage.setLoginUser(data);
+    }
+
+    processUser(data?){
         this.userStorage.setPracteraUser(data);
+    }
+
+    processMilestone(data?){
+        let milestoneIds = data.map(entry => entry.id);
+        this.userStorage.setMilestone(milestoneIds);
+    }
+
+    processActivities(data?){
+        let activityIds = data.map(activity => activity.Activity.id);
+        this.userStorage.setActivityIds(activityIds);
+    }
+
+    processSession(data?){
+        var events = [];
+        data.forEach(function(item){
+            var event = {};
+
+            event['title'] = item['title'];
+            event['status'] = item['isBooked'];
+            event['event_id'] = item['id'];
+            event['description'] = item['description'];
+
+            let startTime = new Date(item.start);
+            let endTime = new Date(item.end);
+            let durationInMinute = Math.floor((endTime.valueOf()  - startTime.valueOf())/60000);
+            if(durationInMinute == 0){
+                event['duration'] = "All day"
+            }else{
+                let hours = Math.floor(durationInMinute / 60);
+                let minutes = durationInMinute % 60;
+                event['duration'] = (hours > 0 ? hours + " Hour " : "") + (minutes > 0 ? minutes + " Minutes " : "");
+            }
+
+            let startHour = startTime.getHours();
+            event['startMinute'] = startTime.getMinutes().toString();
+
+            if(startTime.getHours() >= 12){
+                event['ampm'] = "PM";
+                event['startHour'] = startHour % 12;
+            }else{
+                event['ampm'] = "AM";
+                event['startHour'] = startHour;
+            }
+
+            if (event['startHour']   < 10) {
+                event['startHour']   = "0"+event['startHour'];
+            }
+
+            if (event['startMinute'] < 10) {
+                event['startMinute'] = "0"+event['startMinute'];
+            }
+            event['date'] = startTime.setHours(0,0,0,0);
+            var monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+
+            var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+                "Saturday"];
+            event['monthTitle'] =  monthNames[startTime.getMonth()];
+            event['dayTitle'] = dayNames[startTime.getDay()] + ", " + startTime.getDate() + " " + startTime.getFullYear();
+
+            events.push(event);
+        });
+
+        let results = this.groupBy(events, 'date');
+        results.sort((n1, n2) => n2.date - n1.date);
+
+        for(let i = 0; i < results.length; i++){
+            results[i].events.sort( (n1, n2) => n1.startTime - n2.startTime)
+        }
+
+        console.log(results);
+        return results;
     }
 }
