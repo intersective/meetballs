@@ -4,7 +4,6 @@ import {UserStorage} from "../../providers/user-storage";
 import {NavController} from "ionic-angular";
 import {ResultPage} from "../../pages/result/result";
 import {FeedbackPage} from "../../pages/feedback/feedback";
-import {DataProcessor} from "../../providers/data-processor";
 import {MeetballAvatarComponent} from "../meetball-avatar/meetball-avatar";
 import {CustomLoading} from "../../providers/custom-loading";
 

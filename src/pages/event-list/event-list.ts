@@ -53,7 +53,7 @@ export class EventListPage {
 
     onTimelineClick(){
         this.actionSheet = this.actionSheetCtrl.create({
-            title: 'Modify your album',
+            title: 'Select your timeline',
             buttons: [
                 {
                     text: 'Cancel',

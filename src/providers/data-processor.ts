@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import {UserStorage} from "./user-storage";
+import moment from 'moment';
 
 declare var _paq: any;
 
@@ -398,8 +399,10 @@ export class DataProcessor {
             attendees.push({ email: userStorage.getImage(), response: event['RSVP']});
             event['attendees'] = attendees;
 
-            let startTime = new Date(item.start);
-            let endTime = new Date(item.end);
+            let startTimeInUTC =  moment.utc(item.start).toDate();
+            let endTimeInUTC =  moment.utc(item.end).toDate();
+            let startTime = moment(startTimeInUTC).local().toDate();
+            let endTime = moment(endTimeInUTC).local().toDate();
             let durationInMinute = Math.floor((endTime.valueOf()  - startTime.valueOf())/60000);
             if(durationInMinute == 0){
                 event['duration'] = "All day"
@@ -407,26 +410,27 @@ export class DataProcessor {
                 let hours = Math.floor(durationInMinute / 60);
                 let minutes = durationInMinute % 60;
                 event['duration'] = (hours > 0 ? hours + " Hour " : "") + (minutes > 0 ? minutes + " Minutes " : "");
+
+                let startHour = startTime.getHours();
+                event['startMinute'] = startTime.getMinutes().toString();
+
+                if(startTime.getHours() >= 12){
+                    event['ampm'] = "PM";
+                    event['startHour'] = startHour % 12;
+                }else{
+                    event['ampm'] = "AM";
+                    event['startHour'] = startHour;
+                }
+
+                if (event['startHour']   < 10) {
+                    event['startHour']   = "0"+event['startHour'];
+                }
+
+                if (event['startMinute'] < 10) {
+                    event['startMinute'] = "0"+event['startMinute'];
+                }
             }
 
-            let startHour = startTime.getHours();
-            event['startMinute'] = startTime.getMinutes().toString();
-
-            if(startTime.getHours() >= 12){
-                event['ampm'] = "PM";
-                event['startHour'] = startHour % 12;
-            }else{
-                event['ampm'] = "AM";
-                event['startHour'] = startHour;
-            }
-
-            if (event['startHour']   < 10) {
-                event['startHour']   = "0"+event['startHour'];
-            }
-
-            if (event['startMinute'] < 10) {
-                event['startMinute'] = "0"+event['startMinute'];
-            }
             event['date'] = startTime.setHours(0,0,0,0);
             var monthNames = ["January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December"

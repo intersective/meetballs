@@ -85,7 +85,7 @@ event-child {
   }
 
   .rsvpButton{
-    font-size: 7vw;
+    font-size: 5vw;
     height: 16vw;
   }
 
@@ -134,5 +134,13 @@ event-child {
   .div-button-more{
     display: inline-block;
     vertical-align: middle;
+  }
+
+  .all-day{
+    font-size: 7vw;
+    color: #cf5857;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial;
   }
 }
