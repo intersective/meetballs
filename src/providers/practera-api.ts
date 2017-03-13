@@ -157,6 +157,7 @@ export class PracteraApi {
         headers.append('timelineid', this.userStorage.getSelectedTimeline());
 
         let params: URLSearchParams = new URLSearchParams();
+
         for(let i = 0; i < activityIds.length; i++){
             params.append('activity_id[]', activityIds[i].toString());
         }
@@ -167,7 +168,8 @@ export class PracteraApi {
             .subscribe(
                 res => {
                     console.log("session done");
-                    result = this.dataProcessor.processSession(res.data);
+                    let userImage = this.userStorage.getImage();
+                    result = this.dataProcessor.processSession(this.userStorage, res.data);
                     console.log("process data done");
                     this.replaySubject.next(result);
                 }, error => {

@@ -46,6 +46,18 @@ export class UserStorage {
         window.localStorage.setItem("practeraUser", null);
     }
 
+    public getImage(){
+        //TODO: insert default url image here
+        let defaultImageUrl = "http://content.internetvideoarchive.com/content/photos/9180/518268_027.jpg";
+        let user = this.getPracteraUser();
+        return user.image ? user.image : defaultImageUrl;
+    }
+
+    public getEmail(){
+        let user = this.getPracteraUser();
+        return user.email ? user.email : "";
+    }
+
     // Save user information
     public setPracteraUser(user){
         let practeraUser = this.getPracteraUser();

@@ -28,7 +28,7 @@ export class SheetsuApi {
         observable.map(response => response.json())
             .subscribe(
                 data => {
-                    let userEmail = "TODO";
+                    let userEmail = this.userStorage.getEmail();
                     console.log("Get event by email " + userEmail);
                     let result = [];
                     result[1] = this.dataProcessor.processFeedbacks(data, userEmail);

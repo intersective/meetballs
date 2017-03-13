@@ -43,7 +43,7 @@
         <ion-col width-75>
             <div id="wrapper" >
                 <div *ngFor="let attende of entry['attendees']; let i = index" style="display: inline-table;">
-                    <meetball-avatar #meetballAvatar *ngIf="i < 4 || avatarShow" [img]="'url(assets/img/' + attende.email + ')'" [response]="attende.response"></meetball-avatar>
+                    <meetball-avatar #meetballAvatar *ngIf="i < 4 || avatarShow" [img]="'url(' + attende.email + ')'" [response]="attende.response"></meetball-avatar>
                 </div>
                 <div class="div-button-more">
                     <button class="moreButton" ion-button clear icon-only *ngIf="moreButtonShow" (click)="onMoreClick()">

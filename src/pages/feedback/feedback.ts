@@ -33,7 +33,7 @@ export class FeedbackPage {
 
     onSubmit(){
         this.customLoading.show("Submitting your feedback...");
-        // this.submitData.user_email = this.userStorage.getUser().email;
+        this.submitData.user_email = this.userStorage.getEmail();
         this.submitData.event_id = this.navParams.get('event_id');
 
         let subscription = this.sheetsuAPI.addFeedback(this.submitData);

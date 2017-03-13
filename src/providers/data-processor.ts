@@ -384,15 +384,19 @@ export class DataProcessor {
         this.userStorage.setActivityIds(activityIds);
     }
 
-    processSession(data?){
+    processSession(userStorage, data?){
         var events = [];
         data.forEach(function(item){
             var event = {};
 
             event['title'] = item['title'];
-            event['status'] = item['isBooked'];
             event['event_id'] = item['id'];
             event['description'] = item['description'];
+            event['RSVP'] = item['isBooked'] ? 1 : -1;
+
+            var attendees = [];
+            attendees.push({ email: userStorage.getImage(), response: event['RSVP']});
+            event['attendees'] = attendees;
 
             let startTime = new Date(item.start);
             let endTime = new Date(item.end);

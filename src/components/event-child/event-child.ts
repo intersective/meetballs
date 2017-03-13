@@ -50,7 +50,36 @@ export class EventChildComponent implements OnInit{
     }
 
     onEventClick(){
+        let eventId = this.entry['event_id'];
+        let userEmail = this.userStorage.getEmail();
 
+        this.customLoading.show("Please wait...");
+        let observable = this.sheetsuAPI.getFeedbackByEventId(eventId);
+        observable.subscribe(
+            data => {
+                this.customLoading.dismiss();
+
+                let hasThisUserVoted = data[0];
+                this.results =  data[1];
+
+                if(hasThisUserVoted){
+                    this.navCtrl.push(ResultPage, {results: this.results});
+                }else{
+                    this.navCtrl.push(FeedbackPage, {event_id: eventId});
+                }
+            },
+            error => {
+                this.customLoading.dismiss();
+                if(error.status == 404){
+                    this.navCtrl.push(FeedbackPage, {event_id: eventId});
+                }else{
+                    alert(error)
+                }
+            },
+            () => {
+                console.log("Get feedback by event id " + eventId + "completed");
+            }
+        );
     }
 
     onRSVP(){
