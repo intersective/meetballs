@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import {
-    NavController, NavParams, ActionSheetController
+    NavController, ActionSheetController
 } from 'ionic-angular';
 import {UserStorage} from "../../providers/user-storage";
 import {SheetsuApi} from "../../providers/sheetsu-api";
-import {LeaderBoardPage} from "../leader-board/leader-board";
 import {HomePage} from "../home/home";
 import {PracteraApi} from "../../providers/practera-api";
 import {CustomLoading} from "../../providers/custom-loading";
@@ -36,6 +35,9 @@ export class EventListPage {
 
     ionViewDidLoad() {
         this.timelineArray = this.userStorage.getTimelineArray();
+    }
+
+    ionViewWillEnter(){
         this.updateTimelineTitle();
         this.loadSession();
     }
@@ -83,7 +85,7 @@ export class EventListPage {
         this.loadSession();
     }
 
-    loadSession(){
+    loadSession(refresher?){
         this.customLoading.show("Please wait...");
         let milestoneObservable = this.practeraApi.getMilestones();
 
@@ -98,22 +100,30 @@ export class EventListPage {
                         data =>{
                             this.entries = data;
                             this.customLoading.dismiss();
+                            this.cancelRefresher(refresher);
                         }, err =>{
-                            this.showError(err);
+                            this.showError(err, refresher);
                         }
                     )
                 }, err=>{
-                    this.showError(err);
+                    this.showError(err, refresher);
                 });
             },
             err =>{
-                this.showError(err);
+                this.showError(err, refresher);
             }
         );
     }
 
-    showError(err){
+    showError(err, refresher?){
+        this.cancelRefresher(refresher);
         this.customLoading.dismiss();
         alert(err);
+    }
+
+    cancelRefresher(refresher?){
+        if(refresher != null){
+            refresher.complete();
+        }
     }
 }

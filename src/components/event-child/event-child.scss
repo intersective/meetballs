@@ -11,9 +11,9 @@ event-child {
     }
   }
 
-  ion-col[width-75]{
-    border-left: 1px solid darkgrey;
-    margin-left: 1vw;
+  ion-col[col-3]{
+    border-right: 1px solid darkgrey;
+    margin-right: 1vw;
   }
 
   #hour{
@@ -142,5 +142,14 @@ event-child {
     font-weight: bold;
     text-align: center;
     font-family: Arial;
+  }
+
+  .expand-collapse{
+    line-height: 5vw;
+    height: 5vw;
+    outline-width: 5vw;
+    width: 5vw;
+    font-size: 3vw;
+    color: #cf5857;
   }
 }

@@ -1,7 +1,7 @@
 
-<ion-grid>
-    <ion-row (click)="onEventClick()">
-        <ion-col width-25>
+<ion-grid class="no-padding no-border">
+    <ion-row>
+        <ion-col col-3 (click)="onEventClick()">
             <table>
                 <tr>
                     <td rowspan="2" id="hour">
@@ -19,40 +19,50 @@
             </table>
             <div *ngIf="entry.startHour == null" class="all-day">All day</div>
         </ion-col>
-        <ion-col width-75>
+        <ion-col col-8 (click)="onEventClick()">
             <div id="title">{{entry['title']}}</div>
 
             <br>
             <div id="duration">{{entry['duration']}}</div>
         </ion-col>
-    </ion-row>
-    <ion-row>
-        <ion-col width-25 style="padding-bottom: 0px;">
-            <div id="rsvp">RSVP</div>
-        </ion-col>
-
-        <ion-col width-75 style="padding-bottom: 0px;">
-            <div id="attendants">Attendees</div>
-        </ion-col>
-    </ion-row>
-    <ion-row style="padding-top: 0px;">
-        <ion-col width-25 text-center>
-            <button ion-button clear icon-only [ngClass] = "{'red': entry['RSVP'] == -1, 'green': entry['RSVP'] == 1, 'grey': entry['RSVP'] == 0, 'rsvpButton': true}" (click) = "onRSVP()">
-                <custom-icon set="ci" name="{{rsvpIcon}}" #rsvpButton></custom-icon>
+        <ion-col col-1>
+            <button ion-button clear icon-only (click)="onDisplayRSVP()" class="expand-collapse" [@rotate]="displayRSVPWrapper">
+                <custom-icon set="ci" name="arrow"></custom-icon>
             </button>
         </ion-col>
-        <ion-col width-75>
-            <div id="wrapper" >
-                <div *ngFor="let attende of entry['attendees']; let i = index" style="display: inline-table;">
-                    <meetball-avatar #meetballAvatar *ngIf="i < 4 || avatarShow" [img]="'url(https://sandbox.practera.com/' + attende.email + ')'" [response]="attende.response"></meetball-avatar>
-                </div>
-                <div class="div-button-more">
-                    <button class="moreButton" ion-button clear icon-only *ngIf="moreButtonShow" (click)="onMoreClick()">
-                        <custom-icon set="ci" name="{{iconName}}"></custom-icon>
-                    </button>
-                </div>
-                <div *ngIf="otherText" class="otherText">And {{noOfMorePeople}} others</div>
-            </div>
-        </ion-col>
     </ion-row>
+
+    <div *ngIf="displayRSVPWrapper == 'expanded'" [@toggle] #rsvpWrapper >
+        <ion-row>
+            <ion-col col-3 style="padding-bottom: 0px;">
+                <div id="rsvp">RSVP</div>
+            </ion-col>
+
+            <ion-col col-9 style="padding-bottom: 0px;">
+                <div id="attendants">Attendees</div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row style="padding-top: 0px;">
+            <ion-col col-3 text-center>
+                <button ion-button clear icon-only [ngClass] = "{'red': entry['RSVP'] == -1, 'green': entry['RSVP'] == 1, 'grey': entry['RSVP'] == 0, 'rsvpButton': true}" (click) = "onRSVP()">
+                    <custom-icon set="ci" name="{{rsvpIcon}}" #rsvpButton></custom-icon>
+                </button>
+            </ion-col>
+            <ion-col col-9>
+                <div id="wrapper" >
+                    <div *ngFor="let attende of entry['attendees']; let i = index" style="display: inline-table;">
+                        <meetball-avatar [@toggle] *ngIf="i < 4 || avatarShow" [img]="'url(https://sandbox.practera.com' + attende.email + ')'" [response]="attende.response"></meetball-avatar>
+                    </div>
+                    <div class="div-button-more">
+                        <button class="moreButton" ion-button clear icon-only *ngIf="moreButtonShow" (click)="onMoreClick()" >
+                            <custom-icon set="ci" name="{{iconName}}"></custom-icon>
+                        </button>
+                    </div>
+                    <div *ngIf="otherText" class="otherText">And {{noOfMorePeople}} others</div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+
 </ion-grid>

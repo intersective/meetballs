@@ -25,10 +25,10 @@
 
 
 <ion-content padding="" >
-    <ion-refresher (ionRefresh)="loadSession()">
+    <ion-refresher (ionRefresh)="loadSession($event)">
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
-    <div *ngFor="let entriesOfDay of entries; let i = index">
+    <div *ngFor="let entriesOfDay of entries; let i = index" style="margin-bottom: 10px;">
         <event-parent [entries]="entriesOfDay"></event-parent>
     </div>
 </ion-content>
