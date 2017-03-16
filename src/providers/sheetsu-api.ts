@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Http, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {DataProcessor} from "./data-processor";
-import {ReplaySubject, Observable} from "rxjs";
+import {ReplaySubject} from "rxjs";
 import {UserStorage} from "./user-storage";
 
 /*
@@ -67,54 +67,6 @@ export class SheetsuApi {
                 }else{
                     this.replaySubject.error(error);
                 }
-            }
-        )
-
-        return this.replaySubject;
-    }
-
-    getAchievements(email){
-        let observable = Observable.create(obs =>{
-            setTimeout(()=>{
-
-            }, 1000);
-            obs.next();
-        })
-
-        this.replaySubject = new ReplaySubject(1);
-        observable.subscribe(
-            data => {
-                let results = this.dataProcessor.processAchievements();
-                this.replaySubject.next(results);
-            },
-            error => {
-
-                    this.replaySubject.error(error);
-
-            }
-        )
-
-        return this.replaySubject;
-    }
-
-    getRankings(){
-        let observable = Observable.create(obs =>{
-            setTimeout(()=>{
-
-            }, 1000);
-            obs.next();
-        })
-
-        this.replaySubject = new ReplaySubject(1);
-        observable.subscribe(
-            data => {
-                let results = this.dataProcessor.processLeaderBoard();
-                this.replaySubject.next(results);
-            },
-            error => {
-
-                this.replaySubject.error(error);
-
             }
         )
 

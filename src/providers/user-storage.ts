@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import * as _ from 'underscore/underscore'
 
 /*
  Generated class for the UserStorage provider.
@@ -95,5 +96,30 @@ export class UserStorage {
     public getTimelineArray(){
         let user = this.getPracteraUser();
         return user ? user.timelines : [];
+    }
+
+    public saveAchievements(data){
+        window.localStorage.setItem("achievements", JSON.stringify(data));
+    }
+
+    public getAchievements(){
+        return JSON.parse(window.localStorage.getItem("achievements") || '{}');
+    }
+
+    public updateAchievements(data){
+        let achievementObjects = _.indexBy(this.getAchievements(), 'id');
+        let updateAchievementObjects = _.indexBy(data, 'id');
+
+        let updatedArray = _.values(_.extend(achievementObjects, updateAchievementObjects));
+
+        window.localStorage.setItem("achievements", JSON.stringify(updatedArray));
+    }
+
+    public saveAchievementPoints(points){
+        window.localStorage.setItem("points", points);
+    }
+
+    public getAchievementPoints(){
+        return parseInt(window.localStorage.getItem("points")) || 0;
     }
 }

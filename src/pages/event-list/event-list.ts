@@ -3,10 +3,10 @@ import {
     NavController, ActionSheetController
 } from 'ionic-angular';
 import {UserStorage} from "../../providers/user-storage";
-import {SheetsuApi} from "../../providers/sheetsu-api";
 import {HomePage} from "../home/home";
 import {PracteraApi} from "../../providers/practera-api";
 import {CustomLoading} from "../../providers/custom-loading";
+import {LeaderBoardPage} from "../leader-board/leader-board";
 
 /*
  Generated class for the EventList page.
@@ -22,14 +22,13 @@ import {CustomLoading} from "../../providers/custom-loading";
 })
 
 export class EventListPage {
-    private points;
     private actionSheet;
     private entries;
     private timelineTitle;
     private timelineArray;
 
     constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController,private userStorage: UserStorage,
-                private sheetsuAPI:SheetsuApi, private practeraApi: PracteraApi, private customLoading: CustomLoading) {
+                private practeraApi: PracteraApi, private customLoading: CustomLoading) {
         this.userStorage.setSelectedTimelineIndex(0);
     }
 
@@ -125,5 +124,9 @@ export class EventListPage {
         if(refresher != null){
             refresher.complete();
         }
+    }
+
+    onAchievementClick(){
+        this.navCtrl.push(LeaderBoardPage);
     }
 }

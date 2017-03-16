@@ -1,6 +1,5 @@
 import {
-    Component, Input, OnInit, ViewChild, trigger, transition, style, animate, state,
-    ElementRef, AfterViewInit, DoCheck
+    Component, Input, OnInit, ViewChild, trigger, transition, style, animate, state
 } from '@angular/core';
 import {SheetsuApi} from "../../providers/sheetsu-api";
 import {UserStorage} from "../../providers/user-storage";
@@ -84,7 +83,6 @@ export class EventChildComponent implements OnInit{
 
     onEventClick(){
         let eventId = this.entry['event_id'];
-        let userEmail = this.userStorage.getEmail();
 
         this.customLoading.show("Please wait...");
         let observable = this.sheetsuAPI.getFeedbackByEventId(eventId);

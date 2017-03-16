@@ -56,7 +56,9 @@ fabric.properties
 # End of https://www.gitignore.io/api/webstorm
 
 # Ignore node_modules folder
-/node_modules
+node_modules/*
+!node_modules/swiper
+!node_modules/swiper/*
 /www
 /platforms
 

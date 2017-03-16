@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import {SwiperConfigInterface} from "angular2-swiper-wrapper";
-import {SheetsuApi} from "../../providers/sheetsu-api";
+import {PracteraApi} from "../../providers/practera-api";
+import {CustomLoading} from "../../providers/custom-loading";
+import {UserStorage} from "../../providers/user-storage";
 
 /*
  Generated class for the LeaderBoard page.
@@ -15,7 +17,7 @@ import {SheetsuApi} from "../../providers/sheetsu-api";
 })
 export class LeaderBoardPage {
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, private sheetsuApi: SheetsuApi) {}
+    constructor(public navCtrl: NavController, private customLoading: CustomLoading, private practeraApi: PracteraApi, private userStorage: UserStorage) {}
 
     private config: SwiperConfigInterface = {
         slidesPerView: 3,
@@ -24,40 +26,45 @@ export class LeaderBoardPage {
     };
 
     private achievements;
-    private rankings;
     private selectedIndex = 0;
+    private points = 0;
 
     ionViewDidLoad() {
         this.loadAchievements();
-        this.loadRankings();
     }
 
     loadAchievements(){
-        let observable = this.sheetsuApi.getAchievements(null);
-        observable.subscribe(
-            data =>{
-                this.achievements = data;
+        this.customLoading.show("Please wait...");
+        let achievementObservable = this.practeraApi.getAchievements();
+
+        achievementObservable.subscribe(
+            () =>{
+                let userAchievementObservable = this.practeraApi.getUserAchievement();
+
+                userAchievementObservable.subscribe(
+                    ()=>{
+                        this.points = this.userStorage.getAchievementPoints();
+                        this.achievements = this.userStorage.getAchievements();
+                        this.customLoading.dismiss();
+                    },
+                    err =>{
+                        this.showError(err);
+                    }
+                )
             },
-            error =>{
-
+            err =>{
+                this.showError(err);
             }
-        )
-    }
-
-    loadRankings(){
-        let observable = this.sheetsuApi.getRankings();
-        observable.subscribe(
-            data =>{
-                this.rankings = data;
-            },
-            error =>{
-
-            }
-        )
+        );
     }
 
     onIndexChange(selectedIndex){
         console.log(selectedIndex);
         this.selectedIndex = selectedIndex % this.achievements.length;
+    }
+
+    showError(err){
+        this.customLoading.dismiss();
+        alert(err);
     }
 }

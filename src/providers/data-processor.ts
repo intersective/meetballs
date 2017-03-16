@@ -88,270 +88,6 @@ export class DataProcessor {
         return count;
     }
 
-    processAchievements(){
-        return [
-            {
-                name: 'Raw Meetball',
-                description: 'Reached 10 points',
-                unlocked: 'Unlocked in Feb 12, 2017',
-                icon:'face1_selected'
-            },
-            {
-                name: 'Hot Meetball',
-                description: 'Reached 50 points',
-                unlocked: 'Unlocked in Feb 28, 2017',
-                icon:'face2_selected'
-            },
-            {
-                name: 'Super Meetball',
-                description: 'Reached 100 points',
-                unlocked: null,
-                icon:'face3_selected'
-            },
-            {
-                name: 'Ultra Meetball',
-                description: 'Reached 500 points',
-                unlocked: null,
-                icon:'face4_selected'
-            },
-            {
-                name: 'Meetballfinity',
-                description: 'Reached 10000 points',
-                unlocked: null,
-                icon:'face5_selected'
-            }
-        ]
-    }
-
-    processLeaderBoard(){
-        let fakeData = [
-            {
-                name: 'Imaginary Friend 1',
-                avatar: 'alison@intersective.com.png',
-                points: 532
-            },
-            {
-                name: 'Imaginary Friend 2',
-                avatar: 'jason@intersective.com.png',
-                points: 252
-            },
-            {
-                name: 'Imaginary Friend 3',
-                avatar: 'jun.lee.interns@intersective.com.png',
-                points: 542
-            },
-            {
-                name: 'Imaginary Friend 4',
-                avatar: 'rachel@intersective.com.png',
-                points: 652
-            },
-            {
-                name: 'Imaginary Friend 5',
-                avatar: 'wes@intersective.com.png',
-                points: 528
-            },
-            {
-                name: 'Me',
-                avatar: 'zaw@intersective.com.png',
-                points: 542
-            },
-        ];
-
-        let sortedArray = fakeData.sort((a,b) =>{
-            return a.points - b.points;
-        })
-
-        return sortedArray;
-    }
-
-    processEvents(data, email) {
-        var events = [];
-
-        if(data && data.items){
-            data.items.forEach(function(item){
-                var event = {};
-                //Ignore no @Survey tag event
-                if(item.description == null || !item.description.includes("@Survey")){
-                    return;
-                }else if(item.description && item.description.includes("@Survey")){
-                    _paq.push(['trackEvent', 'Meetings', item.id]);
-                    event['description'] = item.description.replace(/@Survey/g,'');
-                }
-
-                event['event_id'] = item.id;
-                event['title'] = item.summary;
-
-                var startTime = new Date(item.start.dateTime);
-                var endTime = new Date(item.end.dateTime);
-
-                let durationInMinute = Math.floor((endTime.valueOf()  - startTime.valueOf())/60000);
-
-                    event['duration'] = "All day"
-
-                    let hours = Math.floor(durationInMinute / 60);
-                    let minutes = durationInMinute % 60;
-                    event['duration'] = (hours > 0 ? hours + " Hour " : "") + (minutes > 0 ? minutes + " Minutes " : "");
-
-                let startHour = startTime.getHours();
-                event['startMinute'] = startTime.getMinutes().toString();
-
-                if(startTime.getHours() >= 12){
-                    event['ampm'] = "PM";
-                    event['startHour'] = startHour % 12;
-                }else{
-                    event['ampm'] = "AM";
-                    event['startHour'] = startHour;
-                }
-
-                if (event['startHour']   < 10) {
-                    event['startHour']   = "0"+event['startHour'];
-                }
-
-                if (event['startMinute'] < 10) {
-                    event['startMinute'] = "0"+event['startMinute'];
-                }
-
-                var attendees = [];
-
-                if(item.attendees){
-                    item.attendees.forEach(function(attende){
-                        if(attende.email == email){
-                            attendees.unshift({ email: attende.email + ".png", response: attende.responseStatus});
-                            if(attende.responseStatus === "accepted"){
-                                event['RSVP'] = 1;
-                            }else if(attende.responseStatus === "declined"){
-                                event['RSVP'] = -1;
-                            }else{
-                                event['RSVP'] = 0;
-                            }
-                        }else{
-                            attendees.push({ email: attende.email + ".png", response: attende.responseStatus});
-                        }
-
-                    });
-                }else{
-                    attendees.push({ email: email + ".png", response: "accepted"});
-                }
-                event['attendees'] = attendees;
-                event['date'] = startTime.setHours(0,0,0,0);
-
-                var monthNames = ["January", "February", "March", "April", "May", "June",
-                    "July", "August", "September", "October", "November", "December"
-                ];
-
-                var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
-                    "Saturday"];
-
-                event['monthTitle'] =  monthNames[startTime.getMonth()];
-                event['dayTitle'] = dayNames[startTime.getDay()] + ", " + startTime.getDate() + " " + startTime.getFullYear();
-                event['status'] = item.status;
-
-                events.push(event);
-            });
-        }
-
-        let results = this.groupBy(events, 'date')
-        results.sort((n1, n2) => n2.date - n1.date);
-
-        for(let i = 0; i < results.length; i++){
-            results[i].events.sort( (n1, n2) => n1.startTime - n2.startTime)
-        }
-
-        return results;
-
-
-        // "needsAction" - The attendee has not responded to the invitation.
-        // "declined" - The attendee has declined the invitation.
-        // "tentative" - The attendee has tentatively accepted the invitation.
-        // "accepted" -  The attendee has accepted the invitation.
-
-        // return [{
-        //     date: 1485349200000,
-        //     events: [
-        //         {
-        //             ampm: "PM",
-        //             date: 1485349200000,
-        //             dayTitle: "Thursday, 26 2017",
-        //             description: "",
-        //             attendees: [
-        //                 {
-        //                     email: "beau@intersective.com.png",
-        //                     response: "needsAction"
-        //                 },
-        //                 {
-        //                     email: "hayley@intersective.com.png",
-        //                     response: "needsAction"
-        //                 },
-        //                 {
-        //                     email: "shawn@intersective.com.png",
-        //                     response: "declined"
-        //                 },
-        //                 {
-        //                     email: "tobias@intersective.com.png",
-        //                     response: "declined"
-        //                 },
-        //                 {
-        //                     email: "alex.dang.interns@intersective.com.png",
-        //                     response: "tentative"
-        //                 },
-        //                 {
-        //                     email: "srujana@intersective.com.png",
-        //                     response: "tentative"
-        //                 },
-        //                 {
-        //                     email: "rachel@intersective.com.png",
-        //                     response: "accepted"
-        //                 },
-        //                 {
-        //                     email: "jason@intersective.com.png",
-        //                     response: "accepted"
-        //                 },
-        //                 {
-        //                     email: "jun.lee.interns@intersective.com.png",
-        //                     response: "accepted"
-        //                 }
-        //             ],
-        //             duration: "1 Hour ",
-        //             event_id: "vvdhbcnldnft2f06rqfm28e4tc",
-        //             monthTitle: "January",
-        //             startHour: "02",
-        //             startMinute: "30",
-        //             status: "confirmed",
-        //             title: "Test Event (ignore me)",
-        //             RSVP: 0
-        //         },
-        //         {
-        //             ampm: "AM",
-        //             date: 1485349200000,
-        //             dayTitle: "Thursday, 26 2017",
-        //             description: "",
-        //             duration: "1 Hour ",
-        //             event_id: "event_id_0",
-        //             monthTitle: "January",
-        //             startHour: "09",
-        //             startMinute: "30",
-        //             status: "confirmed",
-        //             title: "Test Event (ignore me)",
-        //             RSVP: 1
-        //         },
-        //         {
-        //             ampm: "AM",
-        //             date: 1485349200000,
-        //             dayTitle: "Thursday, 24 2017",
-        //             description: "",
-        //             duration: "1 Hour ",
-        //             event_id: "event_id_0",
-        //             monthTitle: "January",
-        //             startHour: "06",
-        //             startMinute: "30",
-        //             status: "confirmed",
-        //             title: "Test Event (ignore me)",
-        //             RSVP: -1
-        //         }
-        //     ]
-        // }];
-    }
-
     private groupBy(arr, key) {
         var newArr = [],
             Keys = {},
@@ -453,5 +189,35 @@ export class DataProcessor {
 
         console.log(results);
         return results;
+    }
+
+    processAchievements(data?){
+        let achievementArray = data.map(entry => {return {
+            id: entry.Achievement.id,
+            name: entry.Achievement.name,
+            description: entry.Achievement.description,
+            unlocked: null,
+            badge: entry.Achievement.badge
+        }});
+
+        this.userStorage.saveAchievements(achievementArray);
+
+        return this.userStorage.getAchievements();
+    }
+
+    processUserAchievements(data?){
+        let achievementsArray = data.Achievement.map(entry => {return {
+            id: entry["id"],
+            name: entry["name"],
+            description: entry["description"],
+            unlocked: entry["earned"],
+            badge: entry["badge"]
+        }});
+        this.userStorage.updateAchievements(achievementsArray);
+
+        let points = data.total_points;
+        this.userStorage.saveAchievementPoints(points);
+
+        return this.userStorage.getAchievements();
     }
 }

@@ -14,7 +14,7 @@
     <div class="point-container">
         <div class="circle box text-color">
             <div class="point" text-center>
-                <span class="trim point-number">12</span>
+                <span class="trim point-number">{{points}}</span>
                 <span class="trim point-text">Points</span>
             </div>
         </div>
@@ -24,22 +24,11 @@
         <p class="text-color">Trophies</p>
         <swiper (indexChange)="onIndexChange($event)" [config]="config">
             <div *ngFor="let achievement of achievements; let i = index">
-                <div class="achievement-icon" [ngClass]="{'finished': achievement?.unlocked != null, 'unfinished': achievement?.unlocked == null}">
-                    <custom-icon set="ci" name="{{achievement.icon}}"></custom-icon>
-                </div>
+                <img src="{{achievement.badge}}" class="avatar" [ngClass]="{'finished': achievement?.unlocked != null, 'unfinished': achievement?.unlocked == null}">
             </div>
         </swiper>
         <div text-center class="text-color">{{achievements[selectedIndex]?.name}}</div>
         <div text-center class="text-color">{{achievements[selectedIndex]?.description}}</div>
         <div text-center class="text-color">{{achievements[selectedIndex]?.unlocked}} &nbsp;</div>
-    </div>
-
-    <div *ngIf="rankings != null">
-        <p class="text-color">Leader board</p>
-        <div class="ranking-container" *ngFor="let ranking of rankings">
-            <div class="avatar" [ngStyle]="{ 'background-image': 'url(assets/img/' + ranking.avatar + ')'}"></div>
-            <div class="ranking-name text-color">{{ranking.name}}</div>
-            <div class="ranking-point text-color">{{ranking.points}} points</div>
-        </div>
     </div>
 </ion-content>

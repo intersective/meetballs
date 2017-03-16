@@ -16,15 +16,15 @@
         <ion-title><b  style="color: #704d4c;" (click)="onTimelineClick()">{{timelineTitle}}</b></ion-title>
 
         <ion-buttons end>
-            <button ion-button icon-only (click)="onPointsClick()">
-                {{points}} pts
+            <button ion-button icon-only (click)="onAchievementClick()">
+                 My Points
             </button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
 
 
-<ion-content padding="" >
+<ion-content>
     <ion-refresher (ionRefresh)="loadSession($event)">
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>

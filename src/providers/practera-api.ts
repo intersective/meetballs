@@ -4,7 +4,6 @@ import 'rxjs/add/operator/map';
 import {ReplaySubject} from "rxjs";
 import {DataProcessor} from "./data-processor";
 import {UserStorage} from "./user-storage";
-import Rx from 'rxjs/Rx';
 
 /*
  Generated class for the PracteraApi provider.
@@ -22,6 +21,8 @@ export class PracteraApi {
     private MILESTONES_END_POINT = "https://sandbox.practera.com/api/milestones.json";
     private ACTIVITIES_END_POINT = "https://sandbox.practera.com/api/activities.json";
     private SESSION_END_POINT = "https://sandbox.practera.com/api/sessions.json";
+    private ACHIEVEMENT_END_POINT = "https://sandbox.practera.com/api/achievements.json";
+    private USER_ACHIEVEMENT_END_POINT = "https://sandbox.practera.com/api/user_achievements.json";
 
     constructor(public http: Http, private dataProcessor: DataProcessor, private userStorage: UserStorage) {
         console.log('Hello PracteraApi Provider');
@@ -168,9 +169,62 @@ export class PracteraApi {
             .subscribe(
                 res => {
                     console.log("session done");
-                    let userImage = this.userStorage.getImage();
                     result = this.dataProcessor.processSession(this.userStorage, res.data);
                     console.log("process data done");
+                    this.replaySubject.next(result);
+                }, error => {
+                    this.replaySubject.error(error);
+                }
+            )
+
+        return this.replaySubject;
+    }
+
+    public getAchievements(){
+        console.log("achievement begins");
+
+        let headers = new Headers();
+        headers.append('Content-Type', 'text/plain');
+        headers.append('appkey', this.APP_KEY);
+        headers.append('apikey', this.userStorage.getUserApiKey());
+        headers.append('timelineid', this.userStorage.getSelectedTimeline());
+
+        let observer = this.http.get(this.ACHIEVEMENT_END_POINT, {headers: headers});
+
+        let result;
+        this.replaySubject = new ReplaySubject(1);
+        observer.map((response:any) => response.json())
+            .subscribe(
+                res => {
+                    console.log("achievement done");
+                    result = this.dataProcessor.processAchievements(res.data);
+                    this.replaySubject.next(result);
+                }, error => {
+                    this.replaySubject.error(error);
+                }
+            )
+
+        return this.replaySubject;
+    }
+
+    public getUserAchievement(){
+        console.log("user achievement begins");
+
+        let headers = new Headers();
+        headers.append('Content-Type', 'text/plain');
+        headers.append('appkey', this.APP_KEY);
+        headers.append('apikey', this.userStorage.getUserApiKey());
+        headers.append('timelineid', this.userStorage.getSelectedTimeline());
+
+        let observer = this.http.get(this.USER_ACHIEVEMENT_END_POINT, {headers: headers});
+
+        let result;
+        this.replaySubject = new ReplaySubject(1);
+        observer.map((response:any) => response.json())
+            .subscribe(
+                res => {
+                    console.log("user achievement done");
+                    result = this.dataProcessor.processUserAchievements(res.data);
                     this.replaySubject.next(result);
                 }, error => {
                     this.replaySubject.error(error);
