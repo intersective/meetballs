@@ -13,7 +13,7 @@ import {UserStorage} from "./user-storage";
  */
 @Injectable()
 export class SheetsuApi {
-    private API_URL = 'https://sheetsu.com/apis/v1.0/9fb72270cdd1';
+    private API_URL = 'https://sheetsu.com/apis/v1.0/f13b32ee09ae';
     private replaySubject = new ReplaySubject(1);
 
     constructor(public http: Http, private dataProcessor: DataProcessor, private userStorage: UserStorage) {

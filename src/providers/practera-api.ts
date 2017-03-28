@@ -14,7 +14,7 @@ import {UserStorage} from "./user-storage";
 @Injectable()
 export class PracteraApi {
     private replaySubject = new ReplaySubject(1);
-    private APP_KEY = "6862124bfe";
+    private APP_KEY = "6862124bfe";//"8790105a6a";
 
     private AUTHS_END_POINT = "https://sandbox.practera.com/api/auths.json";
     private USER_END_POINT = "https://sandbox.practera.com/api/users.json";

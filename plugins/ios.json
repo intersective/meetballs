@@ -13,6 +13,10 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.surveyapplicationv22156448"
         },
+        "cordova-plugin-googleplus": {
+            "REVERSED_CLIENT_ID": "com.googleusercontent.apps.618067877415-ih1qipgesib84eemcffjq91l2hnb9lg0",
+            "PACKAGE_NAME": "com.ionicframework.surveyapplicationv22156448"
+        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.ionicframework.surveyapplicationv22156448"
         },
@@ -23,10 +27,6 @@
             "PACKAGE_NAME": "com.ionicframework.surveyapplicationv22156448"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.surveyapplicationv22156448"
-        },
-        "cordova-plugin-googleplus": {
-            "REVERSED_CLIENT_ID": "com.googleusercontent.apps.618067877415-ih1qipgesib84eemcffjq91l2hnb9lg0",
             "PACKAGE_NAME": "com.ionicframework.surveyapplicationv22156448"
         }
     },

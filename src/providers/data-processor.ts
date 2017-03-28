@@ -192,6 +192,10 @@ export class DataProcessor {
     }
 
     processAchievements(data?){
+        if(data == null){
+            return JSON.parse('{}');
+        }
+
         let achievementArray = data.map(entry => {return {
             id: entry.Achievement.id,
             name: entry.Achievement.name,
@@ -206,6 +210,10 @@ export class DataProcessor {
     }
 
     processUserAchievements(data?){
+        if(data == null || data.Achievement == null){
+            return JSON.parse('{}');
+        }
+
         let achievementsArray = data.Achievement.map(entry => {return {
             id: entry["id"],
             name: entry["name"],

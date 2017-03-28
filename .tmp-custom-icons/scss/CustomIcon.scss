@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "CustomIcon";
+  src: url('../assets/fonts/CustomIcon.eot');
+  src: url('../assets/fonts/CustomIcon.eot?#iefix') format('eot'),
+  url('../assets/fonts/CustomIcon.woff2') format('woff2'),
+  url('../assets/fonts/CustomIcon.woff') format('woff'),
+  url('../assets/fonts/CustomIcon.ttf') format('truetype'),
+  url('../assets/fonts/CustomIcon.svg#CustomIcon') format('svg');
+}
+
+@mixin ci-styles {
+  font-family: "CustomIcon";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+%ci {
+  @include ci-styles;
+}
+
+@function ci-char($filename) {
+  $char: "";
+
+  @if $filename == android-cancel {
+  $char: "\E001";
+}
+  @if $filename == android-checkmark-circle {
+  $char: "\E002";
+}
+  @if $filename == arrow {
+  $char: "\E003";
+}
+  @if $filename == face1_selected {
+  $char: "\E004";
+}
+  @if $filename == face1_unselected {
+  $char: "\E005";
+}
+  @if $filename == face2_selected {
+  $char: "\E006";
+}
+  @if $filename == face2_unselected {
+  $char: "\E007";
+}
+  @if $filename == face3_selected {
+  $char: "\E008";
+}
+  @if $filename == face3_unselected {
+  $char: "\E009";
+}
+  @if $filename == face4_selected {
+  $char: "\E00A";
+}
+  @if $filename == face4_unselected {
+  $char: "\E00B";
+}
+  @if $filename == face5_selected {
+  $char: "\E00C";
+}
+  @if $filename == face5_unselected {
+  $char: "\E00D";
+}
+  @if $filename == icon_blank {
+  $char: "\E00E";
+}
+  @if $filename == icon_checked {
+  $char: "\E00F";
+}
+  @if $filename == icon_less {
+  $char: "\E010";
+}
+  @if $filename == icon_more {
+  $char: "\E011";
+}
+  @if $filename == icon_unchecked {
+  $char: "\E012";
+}
+  @if $filename == icon_unknown {
+  $char: "\E013";
+}
+
+@return $char;
+}
+
+@mixin ci($filename, $insert: before, $extend: true) {
+&:#{$insert} {
+  @if $extend {
+    @extend %ci;
+  } @else {
+    @include ci-styles;
+  }
+  content: ci-char($filename);
+}
+}
+
+.ci-android-cancel {
+  @include ci(android-cancel);
+}
+.ci-android-checkmark-circle {
+  @include ci(android-checkmark-circle);
+}
+.ci-arrow {
+  @include ci(arrow);
+}
+.ci-face1_selected {
+  @include ci(face1_selected);
+}
+.ci-face1_unselected {
+  @include ci(face1_unselected);
+}
+.ci-face2_selected {
+  @include ci(face2_selected);
+}
+.ci-face2_unselected {
+  @include ci(face2_unselected);
+}
+.ci-face3_selected {
+  @include ci(face3_selected);
+}
+.ci-face3_unselected {
+  @include ci(face3_unselected);
+}
+.ci-face4_selected {
+  @include ci(face4_selected);
+}
+.ci-face4_unselected {
+  @include ci(face4_unselected);
+}
+.ci-face5_selected {
+  @include ci(face5_selected);
+}
+.ci-face5_unselected {
+  @include ci(face5_unselected);
+}
+.ci-icon_blank {
+  @include ci(icon_blank);
+}
+.ci-icon_checked {
+  @include ci(icon_checked);
+}
+.ci-icon_less {
+  @include ci(icon_less);
+}
+.ci-icon_more {
+  @include ci(icon_more);
+}
+.ci-icon_unchecked {
+  @include ci(icon_unchecked);
+}
+.ci-icon_unknown {
+  @include ci(icon_unknown);
+}
